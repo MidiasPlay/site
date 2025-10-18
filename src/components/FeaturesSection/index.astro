@@ -1,0 +1,127 @@
+---
+import '../../styles/container.css';
+---
+<section id="features" class="features">
+    <div class="container">
+        <div class="section-title">
+            <h2>Recursos Poderosos</h2>
+            <p>Tudo que você precisa para criar experiências digitais impactantes em seus ambientes internos</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-tv"></i>
+                </div>
+                <h3>Gestão Multi-Telas</h3>
+                <p>Controle múltiplas telas simultaneamente com nossa interface intuitiva. Configure layouts personalizados e programe conteúdos específicos para cada dispositivo.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-cloud"></i>
+                </div>
+                <h3>Cloud Nativo</h3>
+                <p>Plataforma 100% baseada em nuvem com alta disponibilidade. Acesse seus conteúdos de qualquer lugar e tenha backup automático de todos os dados.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-chart-analytics"></i>
+                </div>
+                <h3>Analytics Avançado</h3>
+                <p>Métricas detalhadas de engajamento e performance. Entenda como seu público interage com o conteúdo e otimize suas campanhas em tempo real.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-calendar-alt"></i>
+                </div>
+                <h3>Programação Inteligente</h3>
+                <p>Agende conteúdos com precisão de minutos. Configure campanhas sazonais, promoções especiais e conteúdos baseados em horários específicos.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-palette"></i>
+                </div>
+                <h3>Templates Personalizáveis</h3>
+                <p>Biblioteca rica em templates profissionais. Customize cores, fontes e layouts para manter a identidade visual da sua marca em todos os conteúdos.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h3>Controle Mobile</h3>
+                <p>Aplicativo móvel para controle remoto completo. Gerencie seus displays, aprove conteúdos e monitore performance direto do seu smartphone.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .features {
+        padding: 100px 0;
+        background: #f8fafc;
+    }
+
+    .section-title {
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+
+    .section-title h2 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #1e293b;
+        margin-bottom: 1rem;
+    }
+
+    .section-title p {
+        font-size: 1.2rem;
+        color: #64748b;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 4rem;
+    }
+
+    .feature-card {
+        background: white;
+        padding: 2rem;
+        border-radius: 16px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+        text-align: center;
+    }
+
+    .feature-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .feature-icon {
+        width: 80px;
+        height: 80px;
+        background: linear-gradient(135deg, #2563eb, #1d4ed8);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1.5rem;
+        font-size: 2rem;
+        color: white;
+    }
+
+    .feature-card h3 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        color: #1e293b;
+    }
+
+    .feature-card p {
+        color: #64748b;
+        line-height: 1.6;
+    }
+</style>

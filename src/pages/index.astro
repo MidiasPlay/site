@@ -1,0 +1,12 @@
+---
+import Carousel from '../components/Carousel';
+import Layout from '../layouts/Layout.astro';
+import FeaturesSection from '../components/FeaturesSection/index.astro';
+---
+
+<Layout>
+	<div style="display: flex; justify-content: center; align-items: baseline; height: 100vh; ">
+		<Carousel client:load />
+	</div>
+	<FeaturesSection />
+</Layout>
