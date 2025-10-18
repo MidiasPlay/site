@@ -24,7 +24,7 @@ jobs:
         # uses: withastro/action@v3
         uses: withastro/action@v4
         with:
-          path: site                  # <- sua pasta do projeto Astro dentro do repo
+          path: .                  # <- sua pasta do projeto Astro dentro do repo
           package-manager: pnpm@9.15.0  # ou pnpm@latest, ou a versão que você usa
         # with:
           # path: . # The root location of your Astro project inside the repository. (optional)
