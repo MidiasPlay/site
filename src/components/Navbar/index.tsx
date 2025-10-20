@@ -34,7 +34,7 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
                     section: 'Por segmento',
                     items: pageList.map((page) => ({
                         label: page.heroTitle,
-                        href: page.slug,
+                        href: `/${page.slug}`,
                         description: page.heroSubtitle,
                     })),
                 },
