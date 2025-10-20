@@ -5,8 +5,8 @@ import react from '@astrojs/react';
 // https://astro.build/config
 export default defineConfig({
     integrations: [react()],
-    site: 'https://midiasplay.github.io',
-    base: '/site',
+    site: 'https://midiasplay.com',
+    // base: '/site',
     vite: {
         plugins: []
     }
