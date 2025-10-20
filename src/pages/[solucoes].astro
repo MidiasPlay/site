@@ -1,0 +1,678 @@
+---
+import type { GetStaticPaths } from 'astro';
+import Layout from '../layouts/Layout.astro';
+import type { PageType } from '../types/page';
+import { solucoesList } from '../data/solucoes';
+import '../styles/container.css';
+
+export const getStaticPaths = (() => {
+    // return solucoesList.map((page) => ({
+    //     params: { solucoes: page.slug },
+    //     props: { page },
+    // }));
+    return []
+}) satisfies GetStaticPaths;
+
+interface Props {
+    page: PageType;
+}
+
+const { page } = Astro.props as Props;
+---
+
+<!-- <Layout title={page.title}>
+    <h1>Soluções para {page.title}</h1>
+    <img src={page.imageUrl} alt={page.title} style="max-width: 100%; height: auto; margin-bottom: 20px;" />
+    <p>{page.content}</p>
+</Layout> -->
+
+<Layout title="Mídia Indoor para Clínicas e Hospitais">
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-badge">
+                        <i class="fas fa-heartbeat"></i>
+                        <span>Solução Especializada</span>
+                    </div>
+                    <h1>🏥 Mídia Indoor para <span class="gradient-text">Clínicas e Hospitais</span></h1>
+                    <p class="hero-description">
+                        Transforme a experiência dos pacientes com comunicação visual inteligente
+                    </p>
+                    <p class="hero-subtitle">
+                        A solução de Mídia Indoor MidiasPlay Fila foi desenvolvida especialmente para o setor de saúde, 
+                        atendendo clínicas, hospitais e consultórios que desejam oferecer uma experiência moderna, 
+                        organizada e informativa em suas recepções e salas de espera.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#contato" class="btn btn-primary">
+                            <i class="fab fa-whatsapp"></i>
+                            Falar com Especialista
+                        </a>
+                        <a href="#beneficios" class="btn btn-outline">
+                            <i class="fas fa-info-circle"></i>
+                            Saiba Mais
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="hero-mockup">
+                        <i class="fas fa-hospital"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Description Section -->
+    <section class="description">
+        <div class="container">
+            <div class="description-content">
+                <div class="description-text">
+                    <p>
+                        Com o MidiasPlay Fila, é possível integrar o controle de senhas e chamadas de atendimento 
+                        a uma exibição atrativa de conteúdos multimídia. Enquanto os pacientes aguardam, o sistema 
+                        exibe informações úteis, campanhas de saúde, orientações, divulgação de serviços e 
+                        especialidades médicas, além de anúncios publicitários personalizados.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="beneficios" class="benefits">
+        <div class="container">
+            <div class="section-title">
+                <h2>💡 Principais Benefícios</h2>
+                <p>Descubra como nossa solução pode revolucionar o atendimento em sua clínica ou hospital</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-sort-numeric-up"></i>
+                    </div>
+                    <h3>Organização e fluidez no atendimento</h3>
+                    <p>Controle de filas com senhas automáticas e exibição em tempo real.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Comunicação eficiente</h3>
+                    <p>Destaque seus serviços, planos de saúde e profissionais com conteúdo visual atrativo.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-smile"></i>
+                    </div>
+                    <h3>Ambiente mais agradável</h3>
+                    <p>Reduza a percepção de espera com vídeos e artes informativas personalizadas.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <h3>Monetização do espaço</h3>
+                    <p>Inclua anunciantes locais ou parceiros de saúde para gerar receita adicional.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Gestão simplificada</h3>
+                    <p>Controle remoto e atualização em tempo real via plataforma web.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Display Section -->
+    <section class="content-display">
+        <div class="container">
+            <div class="section-title">
+                <h2>🖥️ O que pode ser exibido</h2>
+                <p>Conteúdos dinâmicos e informativos para uma experiência completa</p>
+            </div>
+            <div class="display-grid">
+                <div class="display-item">
+                    <div class="display-icon">
+                        <i class="fas fa-ticket-alt"></i>
+                    </div>
+                    <h4>Painel de chamada de senhas</h4>
+                    <p>Número e consultório em tempo real</p>
+                </div>
+                <div class="display-item">
+                    <div class="display-icon">
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                    <h4>Vídeos institucionais</h4>
+                    <p>Campanhas e orientações médicas</p>
+                </div>
+                <div class="display-item">
+                    <div class="display-icon">
+                        <i class="fas fa-info-circle"></i>
+                    </div>
+                    <h4>Informações em tempo real</h4>
+                    <p>Data, hora e clima atualizado</p>
+                </div>
+                <div class="display-item">
+                    <div class="display-icon">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <h4>Anúncios publicitários</h4>
+                    <p>E avisos internos personalizados</p>
+                </div>
+                <div class="display-item">
+                        <div class="display-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                    <h4>Artes customizadas</h4>
+                    <p>Com identidade visual da clínica</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Recommendation -->
+    <section class="product-recommendation">
+        <div class="container">
+            <div class="recommendation-content">
+                <div class="recommendation-badge">
+                    <i class="fas fa-star"></i>
+                    <span>Solução Recomendada</span>
+                </div>
+                <h2>🧩 Produto Ideal para sua Clínica</h2>
+                <div class="product-card">
+                    <div class="product-info">
+                        <div class="product-icon">
+                            <i class="fas fa-desktop"></i>
+                        </div>
+                        <div class="product-details">
+                            <h3>🔹 MidiasPlay Fila</h3>
+                            <p>Ideal para recepções e áreas de espera que utilizam controle de senha e desejam integrar comunicação visual dinâmica.</p>
+                            <ul class="product-features">
+                                <li><i class="fas fa-check"></i> Controle de senhas automático</li>
+                                <li><i class="fas fa-check"></i> Exibição de conteúdo multimídia</li>
+                                <li><i class="fas fa-check"></i> Gestão remota via web</li>
+                                <li><i class="fas fa-check"></i> Customização completa</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>🌐 Integre tecnologia e bem-estar</h2>
+                <p>
+                    Ofereça aos seus pacientes uma experiência moderna, informativa e acolhedora.<br>
+                    Com o MidiasPlay Fila, sua clínica ou hospital comunica melhor, organiza o atendimento 
+                    e fortalece sua imagem profissional.
+                </p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn btn-primary btn-large">
+                        <i class="fab fa-whatsapp"></i>
+                        Solicitar Demonstração
+                    </a>
+                    <a href="#" class="btn btn-outline btn-large">
+                        <i class="fas fa-calculator"></i>
+                        Calcular Investimento
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</Layout>
+
+<style>
+    /* Hero Section */
+    .hero {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 120px 0 80px;
+        min-height: 70vh;
+        display: flex;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .hero::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="10" cy="10" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="90" cy="90" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="30" cy="70" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="70" cy="30" r="1" fill="rgba(255,255,255,0.1)"/></svg>');
+        animation: float 20s ease-in-out infinite;
+    }
+
+    @keyframes float {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-20px) rotate(180deg); }
+    }
+
+    .hero-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+        position: relative;
+        z-index: 2;
+    }
+
+    .hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: rgba(255, 255, 255, 0.2);
+        padding: 0.5rem 1rem;
+        border-radius: 50px;
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem;
+        backdrop-filter: blur(10px);
+    }
+
+    .hero h1 {
+        font-size: 3.5rem;
+        font-weight: 800;
+        line-height: 1.2;
+        margin-bottom: 1.5rem;
+    }
+
+    .gradient-text {
+        background: linear-gradient(45deg, #ffd700, #ff6b6b);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .hero-description {
+        font-size: 1.4rem;
+        font-weight: 500;
+        margin-bottom: 1rem;
+        opacity: 0.95;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin-bottom: 2.5rem;
+        opacity: 0.9;
+    }
+
+    .hero-buttons {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 1rem 2rem;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+        cursor: pointer;
+    }
+
+    .btn-primary {
+        background: #25d366;
+        color: white;
+    }
+
+    .btn-primary:hover {
+        background: #20b358;
+        transform: translateY(-2px);
+    }
+
+    .btn-outline {
+        background: transparent;
+        color: white;
+        border-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .btn-outline:hover {
+        background: rgba(255, 255, 255, 0.1);
+        border-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .btn-large {
+        padding: 1.25rem 2.5rem;
+        font-size: 1.1rem;
+    }
+
+    .hero-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero-mockup {
+        width: 300px;
+        height: 300px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 8rem;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    /* Description Section */
+    .description {
+        padding: 80px 0;
+        background: white;
+    }
+
+    .description-text {
+        max-width: 900px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .description-text p {
+        font-size: 1.2rem;
+        line-height: 1.8;
+        color: #64748b;
+    }
+
+    /* Benefits Section */
+    .benefits {
+        padding: 100px 0;
+        background: #f8fafc;
+    }
+
+    .section-title {
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+
+    .section-title h2 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #1e293b;
+        margin-bottom: 1rem;
+    }
+
+    .section-title p {
+        font-size: 1.2rem;
+        color: #64748b;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .benefits-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+    }
+
+    .benefit-card {
+        background: white;
+        padding: 2.5rem;
+        border-radius: 16px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+        text-align: center;
+    }
+
+    .benefit-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .benefit-icon {
+        width: 80px;
+        height: 80px;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1.5rem;
+        font-size: 2rem;
+        color: white;
+    }
+
+    .benefit-card h3 {
+        font-size: 1.4rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        color: #1e293b;
+    }
+
+    .benefit-card p {
+        color: #64748b;
+        line-height: 1.6;
+    }
+
+    /* Content Display Section */
+    .content-display {
+        padding: 100px 0;
+        background: white;
+    }
+
+    .display-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+    }
+
+    .display-item {
+        text-align: center;
+        padding: 2rem;
+    }
+
+    .display-icon {
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, #25d366, #20b358);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1rem;
+        font-size: 1.5rem;
+        color: white;
+    }
+
+    .display-item h4 {
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        color: #1e293b;
+    }
+
+    .display-item p {
+        color: #64748b;
+        font-size: 0.9rem;
+    }
+
+    /* Product Recommendation */
+    .product-recommendation {
+        padding: 100px 0;
+        background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+    }
+
+    .recommendation-content {
+        text-align: center;
+    }
+
+    .recommendation-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: linear-gradient(135deg, #ffd700, #ffed4e);
+        color: #92400e;
+        padding: 0.5rem 1rem;
+        border-radius: 50px;
+        font-weight: 600;
+        margin-bottom: 2rem;
+    }
+
+    .product-card {
+        background: white;
+        border-radius: 20px;
+        padding: 3rem;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        margin-top: 3rem;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .product-info {
+        display: flex;
+        gap: 2rem;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .product-icon {
+        width: 80px;
+        height: 80px;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        color: white;
+        flex-shrink: 0;
+    }
+
+    .product-details h3 {
+        font-size: 1.8rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        color: #1e293b;
+    }
+
+    .product-details p {
+        color: #64748b;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+    }
+
+    .product-features {
+        list-style: none;
+        padding: 0;
+    }
+
+    .product-features li {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 0.5rem;
+        color: #64748b;
+    }
+
+    .product-features i {
+        color: #25d366;
+    }
+
+    /* CTA Section */
+    .cta-section {
+        padding: 120px 0;
+        background: linear-gradient(135deg, #1e293b, #334155);
+        color: white;
+        text-align: center;
+    }
+
+    .cta-content h2 {
+        font-size: 2.8rem;
+        font-weight: 700;
+        margin-bottom: 2rem;
+    }
+
+    .cta-content p {
+        font-size: 1.2rem;
+        line-height: 1.8;
+        margin-bottom: 3rem;
+        opacity: 0.9;
+    }
+
+    .cta-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .hero {
+            padding: 80px 0 60px;
+            text-align: center;
+        }
+
+        .hero-content {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+        }
+
+        .hero-buttons {
+            justify-content: center;
+        }
+
+        .benefits-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .display-grid {
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+
+        .product-info {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .cta-content h2 {
+            font-size: 2.2rem;
+        }
+
+        .cta-buttons {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .btn {
+            width: 100%;
+            max-width: 300px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .hero h1 {
+            font-size: 2rem;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+        }
+
+        .benefit-card, .product-card {
+            padding: 2rem;
+        }
+    }
+</style>

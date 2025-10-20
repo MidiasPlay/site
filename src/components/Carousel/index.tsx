@@ -4,9 +4,16 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-const Carousel: React.FC = () => {
+type Props = {
+    imageList: {
+        src: string;
+        alt: string;
+    }[];
+}
+
+const Carousel: React.FC<Props> = ({ imageList }) => {
     return (
-        <div style={{ width: '100%', height: '100%', aspectRatio: '16/9', overflow: 'hidden' }}>
+        <div style={{ width: '100%', height: '100%' }}>
             <Swiper
                 modules={[Navigation, Pagination, Autoplay]}
                 spaceBetween={0}
@@ -19,27 +26,24 @@ const Carousel: React.FC = () => {
                 navigation={true}
                 pagination={{ clickable: true }}
             >
-                <SwiperSlide>
-                    <img 
-                        src="https://mapadasfranquias.com.br/wp-content/uploads/2021/10/389loja.jpeg" 
-                        alt="Imagem 1" 
-                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                    />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img 
-                        src="https://tribetecnologia.com.br/wp-content/uploads/s03-pic5-3-scaled-1.jpg" 
-                        alt="Imagem 2" 
-                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                    />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img 
-                        src="https://i.ytimg.com/vi/DqI3zMUOSAY/maxresdefault.jpg" 
-                        alt="Imagem 3" 
-                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                    />
-                </SwiperSlide>
+                {imageList.map((image) => (
+                    <SwiperSlide
+                        style={{
+                            backgroundColor: '#575757',
+                            width: "100%",
+                            height: "100%",
+                            border: "none",
+                            overflow: 'hidden',
+                            aspectRatio: "20/5",
+                        }}
+                    >
+                        <img 
+                            src={image.src} 
+                            alt={image.alt} 
+                            style={{ width: '100%', objectFit: 'cover' }}
+                        />
+                    </SwiperSlide>
+                ))}
             </Swiper>
         </div>
     );

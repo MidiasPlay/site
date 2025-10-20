@@ -5,8 +5,12 @@ import FeaturesSection from '../components/FeaturesSection/index.astro';
 ---
 
 <Layout>
-	<div style="display: flex; justify-content: center; align-items: baseline; height: 100vh; ">
-		<Carousel client:load />
-	</div>
+	<Carousel client:load
+		imageList={[
+			{ src: 'https://mapadasfranquias.com.br/wp-content/uploads/2021/10/389loja.jpeg', alt: 'Imagem 1' },
+			{ src: 'https://tribetecnologia.com.br/wp-content/uploads/s03-pic5-3-scaled-1.jpg', alt: 'Imagem 2' },
+			{ src: 'https://i.ytimg.com/vi/DqI3zMUOSAY/maxresdefault.jpg', alt: 'Imagem 3' },
+		]}
+	/>
 	<FeaturesSection />
 </Layout>

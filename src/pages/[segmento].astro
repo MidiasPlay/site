@@ -1,0 +1,440 @@
+---
+import type { GetStaticPaths } from 'astro';
+import type { PageType } from '../types/solucoes';
+import Layout from '../layouts/Layout.astro';
+import { pageList } from '../data/pages.data';
+import '../styles/container.css';
+
+export const getStaticPaths = (() => {
+    return pageList.map((page) => ({
+        params: { segmento: page.slug },
+        props: { page },
+    }));
+}) satisfies GetStaticPaths;
+
+interface Props {
+    page: PageType;
+}
+
+const { page } = Astro.props as Props;
+
+const theme = {
+    primary: page.theme?.primary ?? '#0ea5e9',
+    accent: page.theme?.accent ?? '#22c55e',
+    heroBg: page.theme?.heroBg ?? 'linear-gradient(180deg, #f0f9ff 0%, #ffffff 60%)',
+    softBg: page.theme?.softBg ?? '#f6f7fb',
+};
+
+// JSON-LD para SEO
+const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: page.product.name,
+    description: page.product.shortDescription ?? page.seo.description,
+    brand: 'MidiasPlay',
+    category: page.segmentLabel,
+    offers: {
+        '@type': 'Offer',
+        availability: 'https://schema.org/InStock',
+        url: page.product.ctaHref ?? '/contato',
+        priceCurrency: 'BRL',
+        // preço opcionalmente omitido; inclua quando tiver
+    },
+};
+---
+
+<Layout title={page.seo.title}>
+    <Fragment slot="head">
+        <meta name="description" content={page.seo.description} />
+        {page.seo.keywords && <meta name="keywords" content={page.seo.keywords.join(', ')} />}
+        {page.seo.image && <meta property="og:image" content={page.seo.image} />}
+        <script type="application/ld+json">
+        {JSON.stringify(jsonLd)}
+        </script>
+    </Fragment>
+
+    <!-- HERO -->
+    <section class="hero" style={`--hero-bg:${theme.heroBg};`}>
+        <div class="container">
+            <div class="hero-text">
+                <!-- {page.heroKicker && <span class="kicker">{page.heroKicker}</span>} -->
+                <h1>
+                    {page.heroTitle}
+                    <!-- <span class="segment">— {page.segmentLabel}</span> -->
+                </h1>
+                {page.heroSubtitle && <p class="subtitle">{page.heroSubtitle}</p>}
+                <div class="badges">
+                    {page.badges?.map((b) => <span class="badge">{b}</span>)}
+                </div>
+            </div>
+
+            {page.heroImage && (
+                <picture class="hero-media">
+                    <img src={page.heroImage} alt={page.segmentLabel} loading="eager" decoding="async" />
+                </picture>
+            )}
+        </div>
+    </section>
+
+    <!-- INTRO -->
+    <section class="intro">
+        <div class="container">
+            <p class="lead">{page.intro}</p>
+        </div>
+    </section>
+
+    <!-- BENEFÍCIOS -->
+    <section class="grid-section" style={`--soft-bg:${theme.softBg};`}>
+        <div class="container">
+            <h2>Principais benefícios</h2>
+            <ul class="cards">
+                {page.benefits.map((b) => (
+                    <li class="card">
+                        <div class="card-dot"></div>
+                        <p>{b}</p>
+                    </li>
+                ))}
+            </ul>
+        </div>
+    </section>
+
+    <!-- O QUE PODE SER EXIBIDO -->
+    <section class="grid-section alt">
+        <div class="container">
+            <h2>O que pode ser exibido</h2>
+            <div class="twocols">
+                <ul class="checklist">
+                    {page.canShow.map((item) => (
+                        <li>{item}</li>
+                    ))}
+                </ul>
+
+                {page.heroMedia && page.heroMedia.length > 0 && (
+                    <div class="gallery">
+                        {page.heroMedia.slice(0, 3).map((m) => (
+                            <figure class="gallery-item">
+                                <img src={m.src} alt={m.alt ?? page.segmentLabel} loading="lazy" decoding="async" />
+                            </figure>
+                        ))}
+                    </div>
+                )}
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUTO RECOMENDADO -->
+    <section class="product">
+        <div class="container">
+            <div class="product-card" style={`--primary:${theme.primary};`}>
+                {page.product.badge && <span class="product-badge">{page.product.badge}</span>}
+                <h3 class="product-title">{page.product.name}</h3>
+                {page.product.shortDescription && <p class="product-desc">{page.product.shortDescription}</p>}
+                {page.product.highlights && page.product.highlights.length > 0 && (
+                    <ul class="product-highlights">
+                        {page.product.highlights.map((h) => <li>{h}</li>)}
+                    </ul>
+                )}
+                <div class="product-actions">
+                    <a class="btn-primary" href={page.product.ctaHref ?? '/contato'}>
+                        {page.product.ctaLabel ?? 'Fale com um especialista'}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ (opcional) -->
+    <!-- {page.faqs && page.faqs.length > 0 && (
+        <section class="faq" style={`--soft-bg:${theme.softBg};`}>
+            <div class="container">
+                <h2>Dúvidas frequentes</h2>
+                <div class="faq-list">
+                    {page.faqs.map((f) => (
+                        <details class="faq-item">
+                            <summary>{f.q}</summary>
+                            <p>{f.a}</p>
+                        </details>
+                    ))}
+                </div>
+            </div>
+        </section>
+    )} -->
+
+    <!-- FECHO / CTA -->
+    <section class="closing">
+        <div class="container">
+            {page.closingTitle && <h2>{page.closingTitle}</h2>}
+            {page.closingText && <p class="closing-text">{page.closingText}</p>}
+            <div class="cta-actions">
+                <a class="btn-outline" href={page.product.ctaHref ?? '/contato'}>Solicitar demonstração</a>
+                <!-- <a class="btn-ghost" href="/contato">Falar com consultor</a> -->
+            </div>
+        </div>
+    </section>
+</Layout>
+
+<style>
+    :root {
+        --container: 1080px;
+        --radius: 16px;
+        --shadow: 0 10px 30px rgba(0,0,0,.06);
+    }
+    .container {
+        width: min(100% - 2rem, var(--container));
+        margin-inline: auto;
+    }
+
+    /* HERO */
+    .hero {
+        background: var(--hero-bg);
+        padding: 64px 0 24px;
+    }
+    .hero .container {
+        display: grid;
+        grid-template-columns: 1.1fr .9fr;
+        gap: 32px;
+        align-items: center;
+    }
+    .hero-text .kicker {
+        display: inline-block;
+        font-size: 1.25rem;
+        opacity: .9;
+        margin-bottom: .25rem;
+    }
+    .hero h1 {
+        font-size: clamp(2rem, 3.5vw, 3rem);
+        line-height: 1.1;
+        margin: 0 0 .5rem;
+    }
+    .hero h1 .segment {
+        display: block;
+        font-weight: 500;
+        font-size: .9em;
+        opacity: .8;
+    }
+    .subtitle {
+        font-size: 1.125rem;
+        color: #334155;
+        margin: 0 0 1rem;
+    }
+    .badges {
+        display: flex; gap: .5rem; flex-wrap: wrap;
+    }
+    .badge {
+        background: #eef2ff;
+        color: #3730a3;
+        padding: .35rem .6rem;
+        border-radius: 999px;
+        font-size: .85rem;
+        border: 1px solid #e5e7eb;
+    }
+    .hero-media img {
+        width: 100%;
+        height: auto;
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+    }
+
+    /* INTRO */
+    .intro {
+        padding: 24px 0 8px;
+    }
+    .lead {
+        font-size: 1.125rem;
+        color: #1f2937;
+    }
+
+    /* GRID SECTIONS */
+    .grid-section {
+        padding: 48px 0;
+    }
+    .grid-section.alt {
+        background: var(--soft-bg);
+    }
+    h2 {
+        font-size: clamp(1.5rem, 2.4vw, 2rem);
+        margin: 0 0 1rem;
+    }
+    .cards {
+        display: grid;
+        gap: 16px;
+        grid-template-columns: repeat( auto-fit, minmax(260px, 1fr) );
+        list-style: none;
+        padding: 0; margin: 0;
+    }
+    .card {
+        background: #fff;
+        border: 1px solid #e5e7eb;
+        border-radius: var(--radius);
+        padding: 16px 16px 16px 44px;
+        position: relative;
+        box-shadow: var(--shadow);
+        min-height: 72px;
+    }
+    .card-dot {
+        position: absolute;
+        left: 16px; top: 16px;
+        width: 12px; height: 12px;
+        border-radius: 50%;
+        background: #0ea5e9;
+        box-shadow: 0 0 0 6px rgba(14,165,233,.15);
+    }
+
+    .twocols {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+        align-items: start;
+    }
+    .checklist {
+        list-style: none; padding: 0; margin: 0;
+        display: grid; gap: 12px;
+    }
+    .checklist li {
+        padding-left: 28px;
+        position: relative;
+    }
+    .checklist li::before {
+        content: '✔';
+        position: absolute;
+        left: 0;
+        color: #16a34a;
+    }
+    .gallery {
+        display: grid;
+        gap: 12px;
+        grid-template-columns: repeat( auto-fit, minmax(160px, 1fr) );
+    }
+    .gallery-item img {
+        width: 100%; height: auto;
+        border-radius: 12px;
+        border: 1px solid #e5e7eb;
+        box-shadow: var(--shadow);
+    }
+
+    /* PRODUTO */
+    .product {
+        padding: 48px 0;
+    }
+    .product-card {
+        border-radius: 20px;
+        border: 1px solid #e5e7eb;
+        box-shadow: var(--shadow);
+        padding: 24px;
+        background:
+        radial-gradient(1200px 240px at 0% -10%, color-mix(in oklab, var(--primary), #fff 85%) 0%, transparent 70%),
+        #fff;
+    }
+    .product-badge {
+        display: inline-block;
+        font-size: .8rem;
+        padding: .25rem .6rem;
+        border-radius: 999px;
+        border: 1px solid rgba(0,0,0,.06);
+        background: #fff;
+        margin-bottom: .5rem;
+    }
+    .product-title {
+        margin: 0 0 .25rem; font-size: 1.5rem;
+    }
+    .product-desc {
+        margin: 0 0 1rem; color: #334155;
+    }
+    .product-highlights {
+        display: grid; gap: 8px; margin: 0 0 1rem; padding: 0; list-style: none;
+    }
+    .product-highlights li {
+        padding-left: 28px; position: relative;
+    }
+    .product-highlights li::before {
+        content: '•';
+        position: absolute;
+        left: 10px;
+        color: #0ea5e9;
+        font-weight: 700;
+    }
+    .product-actions {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+    .btn-primary, .btn-outline, .btn-ghost {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: .8rem 1rem;
+        border-radius: 12px;
+        text-decoration: none;
+        font-weight: 600;
+        border: 1px solid transparent;
+    }
+    .btn-primary {
+        background: var(--primary);
+        color: #fff;
+        transition: transform .05s ease;
+    }
+    .btn-primary:active {
+        transform: translateY(1px);
+    }
+    .btn-outline {
+        border-color: #cbd5e1;
+        color: #0f172a;
+        background: #fff;
+    }
+    .btn-ghost {
+        background: transparent;
+        color: #0f172a;
+        opacity: .8;
+    }
+
+    /* FAQ */
+    .faq {
+        padding: 48px 0;
+        background: var(--soft-bg);
+    }
+    .faq-list {
+        display: grid;
+        gap: 12px;
+    }
+    .faq-item {
+        background: #fff;
+        border: 1px solid #e5e7eb;
+        border-radius: 12px;
+        padding: 16px;
+    }
+    .faq-item > summary {
+        cursor: pointer;
+        font-weight: 600;
+    }
+    .faq-item > p {
+        margin: .5rem 0 0;
+        color: #334155;
+    }
+
+    /* CLOSING */
+    .closing {
+        padding: 48px 0 72px;
+    }
+    .closing h2 {
+        margin: 0 0 .5rem;
+    }
+    .closing-text {
+        color: #1f2937;
+        margin: 0 0 1rem;
+    }
+    .cta-actions {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    /* RESPONSIVO */
+    @media (max-width: 980px) {
+        .hero .container {
+            grid-template-columns: 1fr;
+        }
+        .twocols {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>

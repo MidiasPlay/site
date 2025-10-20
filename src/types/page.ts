@@ -1,6 +1,6 @@
 export type PageType = {
     slug: string;
     title: string;
-    imageList: string[];
+    imageUrl: string;
     content: string;
 }
