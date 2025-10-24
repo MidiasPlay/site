@@ -61,40 +61,40 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
             ],
         },
         {
-            label: 'Produtos',
-            href: '/produtos',
-            children: [
-                {
-                    section: 'Plataformas',
-                    items: [
-                        { 
-                            label: 'MídiasPlay', 
-                            href: '/produtos/midiasplay',
-                            description: 'Plataforma completa de gestão de mídias digitais'
-                        },
-                        { 
-                            label: 'MídiasPlay Fila', 
-                            href: '/produtos/midiasplay-fila',
-                            description: 'Sistema avançado de gerenciamento de filas'
-                        },
-                    ],
-                },
-                {
-                    section: 'Recursos',
-                    items: [
-                        { 
-                            label: 'Analytics', 
-                            href: '/produtos/analytics',
-                            description: 'Análise detalhada de dados e métricas'
-                        },
-                        { 
-                            label: 'Automação', 
-                            href: '/produtos/automacao',
-                            description: 'Automatização de processos e workflows'
-                        },
-                    ],
-                },
-            ],
+            label: 'Produto',
+            href: '/produto',
+            // children: [
+            //     {
+            //         section: 'Plataformas',
+            //         items: [
+            //             { 
+            //                 label: 'MídiasPlay', 
+            //                 href: '/produtos/midiasplay',
+            //                 description: 'Plataforma completa de gestão de mídias digitais'
+            //             },
+            //             { 
+            //                 label: 'MídiasPlay Fila', 
+            //                 href: '/produtos/midiasplay-fila',
+            //                 description: 'Sistema avançado de gerenciamento de filas'
+            //             },
+            //         ],
+            //     },
+            //     {
+            //         section: 'Recursos',
+            //         items: [
+            //             { 
+            //                 label: 'Analytics', 
+            //                 href: '/produtos/analytics',
+            //                 description: 'Análise detalhada de dados e métricas'
+            //             },
+            //             { 
+            //                 label: 'Automação', 
+            //                 href: '/produtos/automacao',
+            //                 description: 'Automatização de processos e workflows'
+            //             },
+            //         ],
+            //     },
+            // ],
         },
         { label: 'Planos e Serviços', href: '/planos' },
         { label: 'Demonstração', href: '/demonstracao' },
