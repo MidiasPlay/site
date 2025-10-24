@@ -1,0 +1,310 @@
+---
+import { Icon } from '@iconify/react';
+import Layout from '../layouts/Layout.astro';
+
+// troque por imagens reais do seu projeto (ou remova <img> se não for usar)
+const displayImg = "../assets/logotipo.png";
+const controleImg = "../assets/logotipo.png";
+---
+
+<Layout title="Nossos Produtos">
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container center">
+            <h1>MidiasPlay</h1>
+            <p class="lead">
+                Transforme qualquer TV em um canal de comunicação dinâmico e 100% controlável pela web.
+            </p>
+            <div class="cta">
+                <a href="#padrao" class="btn btn-primary">MidiasPlay Padrão</a>
+                <a href="#fila" class="btn btn-outline">MidiasPlay Fila</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMO FUNCIONA -->
+    <section class="section">
+        <div class="container">
+            <h2 class="title center">Como o sistema funciona</h2>
+            <p class="muted center maxw-720">
+                O MidiasPlay é composto por duas aplicações integradas: uma para exibir seus conteúdos e outra para controlá-los de forma simples e intuitiva.
+            </p>
+
+            <div class="grid two mt-32">
+                <div>
+                    <img src={displayImg} alt="Aplicativo Display na TV" class="card-img" />
+                    <h3>Aplicativo Display (TV Box)</h3>
+                    <p class="muted">
+                        Rode o MidiasPlay em uma TV Box Android e exiba programas com vídeos, imagens, promoções e informações em tempo real.
+                    </p>
+                </div>
+                <div>
+                    <img src={controleImg} alt="Painel de Controle Web" class="card-img" />
+                    <h3>Painel de Controle Web</h3>
+                    <p class="muted">
+                        Gerencie de qualquer lugar: crie programas, envie mídias, agende horários e monitore displays em tempo real.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUTOS -->
+    <section id="padrao" class="section alt">
+        <div class="container">
+            <h2 class="title center">Produtos</h2>
+            <div class="grid two mt-24">
+                <!-- Padrão -->
+                <div class="card">
+                    <h3 class="accent-blue">MidiasPlay Padrão</h3>
+                    <p class="muted">
+                        Para quem deseja exibir conteúdos de forma dinâmica e profissional. Crie programas com vídeos, imagens e informações em tempo real.
+                    </p>
+                    <ul class="list">
+                        <li>
+                            <Icon icon="mdi:android" width="22" height="22" />
+                            <span>Aplicativo para TV Box (Android TV)</span>
+                        </li>
+                        <li>
+                            <Icon icon="mdi:web" width="22" height="22" />
+                            <span>Gerenciamento completo via MidiasPlay Controle</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Fila -->
+                <div id="fila" class="card">
+                    <h3 class="accent-indigo">MidiasPlay Fila</h3>
+                    <p class="muted">
+                        Ideal para atendimento em padarias, açougues, clínicas e balcões. Exiba mídia enquanto organiza o fluxo de atendimento.
+                    </p>
+                    <ul class="list">
+                        <li>
+                            <Icon icon="mdi:android" width="22" height="22" />
+                            <span>Aplicativo para TV Box (Android TV)</span>
+                        </li>
+                        <li>
+                            <Icon icon="mdi:web" width="22" height="22" />
+                            <span>Gerenciamento via MidiasPlay Controle</span>
+                        </li>
+                        <li>
+                            <Icon icon="lucide:queue" width="22" height="22" />
+                            <span>Fila: modo <strong>Senha</strong> ou <strong>Caixa Livre</strong></span>
+                        </li>
+                        <li>
+                            <Icon icon="mdi:remote-tv" width="22" height="22" />
+                            <span>Controle de fila direto pela TV Box</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RECURSOS -->
+    <section class="section">
+        <div class="container">
+            <h2 class="title center">Principais recursos</h2>
+
+            <div class="grid three mt-24">
+                <div class="feature">
+                    <h4>🎬 Programas de Slides</h4>
+                    <p class="muted">Combine imagens, vídeos e links em sequências atraentes com transições suaves e tempo por item.</p>
+                </div>
+
+                <div class="feature">
+                    <h4>🕓 Agendamento de Programas</h4>
+                    <p class="muted">Defina horários por programa. Manhã de ofertas, tarde institucional, noite promocional — tudo automático.</p>
+                </div>
+
+                <div class="feature">
+                    <h4>⚡ Atualização em Tempo Real</h4>
+                    <p class="muted">Edite no painel e veja a tela atualizar instantaneamente, sem reiniciar o dispositivo.</p>
+                </div>
+
+                <div class="feature">
+                    <h4>📺 Gerenciamento de Displays</h4>
+                    <p class="muted">Status online/offline, últimos check-ins, envio remoto de atualizações e organização por local/unidade.</p>
+                </div>
+
+                <div class="feature">
+                    <h4>👥 Controle de Usuários</h4>
+                    <p class="muted">Perfis e permissões por equipe, loja ou franquia. Segurança e governança de acesso simplificadas.</p>
+                </div>
+
+                <div class="feature">
+                    <h4>📶 Off-line</h4>
+                    <p class="muted">Sem internet? Os programas continuam rodando a partir do cache local, sem travamentos.</p>
+                </div>
+
+                <div class="feature">
+                    <h4>📤 Upload de Imagens e Vídeos</h4>
+                    <p class="muted">Envie mídias direto do navegador. O sistema processa e prepara para exibição imediata.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-final">
+        <div class="container center">
+            <h2>Pronto para transformar sua comunicação?</h2>
+            <p class="muted">Leve sua marca para o próximo nível com o MidiasPlay — mídia indoor inteligente e simples de operar.</p>
+            <a href="/contato" class="btn btn-light">Fale conosco</a>
+        </div>
+    </section>
+</Layout>
+
+<style>
+    :root{
+        --bg: #0e1b4d;
+        --bg-2: #0a1540;
+        --blue: #2f6cf6;
+        --indigo: #6754f3;
+        --text: #1f2937;
+        --muted: #5b6474;
+        --card: #ffffff;
+        --border: #e6e8ee;
+        --radius: 16px;
+        --shadow: 0 10px 30px rgba(10, 21, 64, .08);
+        --shadow-lg: 0 20px 50px rgba(10, 21, 64, .12);
+        --container: 1160px;
+    }
+
+    html, body {
+        margin: 0;
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+        color: var(--text);
+        background: #f7f8fb;
+        line-height: 1.5;
+    }
+
+    .container {
+        max-width: var(--container);
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    .center {
+        text-align: center;
+    }
+    .maxw-720 {
+        max-width: 720px;
+        margin: 0 auto;
+    }
+    .mt-24 {
+        margin-top: 24px;
+    }
+    .mt-32 {
+        margin-top: 32px;
+    }
+
+    .hero {
+        background: radial-gradient(1200px 400px at 50% -10%, #2f6cf666, transparent), linear-gradient(135deg, var(--bg), var(--bg-2));
+        color: #fff;
+        padding: 72px 0 64px;
+    }
+    .hero h1 {
+        font-size: 48px;
+        margin: 0 0 8px;
+        letter-spacing: -0.02em;
+    }
+    .lead {
+        font-size: 18px;
+        opacity: .95;
+    }
+    .cta {
+        margin-top: 24px;
+        display: inline-flex;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 18px;
+        border-radius: 999px;
+        text-decoration: none;
+        font-weight: 600;
+        border: 1px solid transparent;
+        transition: transform .06s ease, box-shadow .2s ease, background .2s ease, color .2s ease;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-primary { background: #fff; color: var(--blue); box-shadow: var(--shadow); }
+    .btn-outline { background: transparent; color: #fff; border-color: #ffffff88; }
+    .btn-outline:hover { background: #fff; color: var(--blue); }
+    .btn-light { background: #fff; color: var(--bg); box-shadow: var(--shadow); }
+
+    .section { padding: 64px 0; background: #fff; }
+    .section.alt { background: #f2f5ff; }
+    .title { font-size: 32px; margin: 0 0 8px; letter-spacing: -0.01em; }
+    .muted { color: var(--muted); }
+
+    .grid { display: grid; gap: 28px; }
+    .grid.two { grid-template-columns: repeat(1, 1fr); }
+    .grid.three { grid-template-columns: repeat(1, 1fr); }
+    @media (min-width: 820px) {
+        .grid.two { grid-template-columns: repeat(2, 1fr); }
+        .grid.three { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    .card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 20px 22px;
+        box-shadow: var(--shadow);
+    }
+    .card-img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: var(--radius);
+        box-shadow: var(--shadow-lg);
+        margin-bottom: 12px;
+    }
+    .accent-blue {
+        color: var(--blue);
+        margin: 0 0 6px;
+    }
+    .accent-indigo {
+        color: var(--indigo);
+        margin: 0 0 6px;
+    }
+
+    .list {
+        list-style: none;
+        padding: 0;
+        margin: 12px 0 0;
+        display: grid;
+        gap: 10px;
+    }
+    .list li {
+        display: grid;
+        grid-template-columns: 24px 1fr;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .feature {
+        background: #fff;
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 18px 18px;
+        box-shadow: var(--shadow);
+    }
+
+    .cta-final {
+        background: linear-gradient(135deg, var(--bg), var(--bg-2));
+        color: #fff;
+        padding: 56px 0;
+    }
+    .cta-final h2 {
+        margin: 0 0 8px;
+        font-size: 28px;
+    }
+    .cta-final p {
+        margin: 0 0 18px;
+    }
+</style>

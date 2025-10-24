@@ -1,0 +1,270 @@
+---
+import Layout from '../layouts/Layout.astro';
+import tvBoxImg from "../assets/new-prosb3000.png";
+
+const planos = [
+    {
+        slug: "display-box",
+        titulo: "Display Box",
+        descricao: "1 ano de MidiasPlay + TVBOX*",
+        precoParcelado: "12x R$ 79,90",
+        precoAvista: "R$ 850,00 à vista (plano anual)",
+        cor: "#2563eb",
+        borda: "#c7d2fe",
+        popular: false,
+        bullets: [
+            "Ideal para vitrines, recepções e cardápio digital",
+            "Conteúdos e anúncios automatizados",
+            "Atualização remota pela internet",
+            "Suporte técnico incluso"
+        ]
+    },
+    {
+        slug: "fila-box",
+        titulo: "Fila Box",
+        descricao: "1 ano de MidiasPlay Fila + TVBOX*",
+        precoParcelado: "12x R$ 99,90",
+        precoAvista: "R$ 1.050,00 à vista (plano anual)",
+        cor: "#059669",
+        borda: "#bbf7d0",
+        popular: true,
+        bullets: [
+            "Controle de senhas e chamadas em tempo real",
+            "Vídeos e campanhas durante o atendimento",
+            "Clima, notícias e hora (informação em tempo real)",
+            "Suporte técnico incluso"
+        ]
+    },
+    {
+        slug: "custom-box",
+        titulo: "Custom Box",
+        descricao: "Monte seu plano com a quantidade desejada de displays",
+        precoParcelado: "Sob consulta",
+        precoAvista: "Planos corporativos sob medida",
+        cor: "#ea580c",
+        borda: "#fed7aa",
+        popular: false,
+        bullets: [
+            "Perfeito para redes de lojas e franquias",
+            "Centralize o controle de múltiplos displays",
+            "Conteúdos personalizados por unidade",
+            "Suporte técnico premium"
+        ]
+    }
+];
+---
+
+
+<Layout title="Planos">
+    <main class="wrap">
+        <header class="hero">
+            <h1>Planos para sua Mídia Indoor</h1>
+            <p>Três opções para acelerar sua comunicação visual: exiba ofertas, controle filas e gerencie múltiplos displays em qualquer lugar.</p>
+        </header>
+
+        <section class="grid">
+            {planos.map((p) => (
+                <article class="col">
+                    <div class="card" style={`border-color:${p.borda}`}>
+                        {p.popular && <span class="badge">Mais vendido</span>}
+                        <div class="top">
+                            <img class="tvimg" src={tvBoxImg.src} alt="TV Box inclusa" width="64" height="64" loading="lazy" />
+                            <div>
+                                <div class="title">
+                                    <h2 style={`color:${p.cor}`}>{p.titulo}</h2>
+                                    <span class="tone" style={`background:${p.borda}; width:40px`}></span>
+                                </div>
+                                <p class="desc">{p.descricao}</p>
+                            </div>
+                        </div>
+
+                        <ul>{p.bullets.map((b) => <li>{b}</li>)}</ul>
+
+                        <div class="price">
+                            <div class="parc" style={`color:${p.cor}`}>{p.precoParcelado}</div>
+                            <div class="avista">{p.precoAvista}</div>
+                        </div>
+
+                        <div class="actions">
+                            {p.slug === "custom-box" ? (
+                                <>
+                                <button class="btn" aria-label="Solicitar cotação Custom Box">Solicitar cotação</button>
+                                <button class="btn secondary" aria-label="Fale com vendas">Fale com vendas</button>
+                                </>
+                            ) : (
+                                <>
+                                <button class="btn" aria-label={`Escolher plano ${p.titulo}`}>Escolher plano</button>
+                                <button class="btn secondary" aria-label="Comparar planos">Comparar</button>
+                                </>
+                            )}
+                        </div>
+                    </div>
+                </article>
+            ))}
+        </section>
+
+        <p class="foot">* TVBOX inclusa no envio inicial. Sujeito à disponibilidade e política de garantia. Parcelamento em 12x; valores à vista aplicados ao plano anual.</p>
+    </main>
+</Layout>
+
+<style>
+    :root {
+        --bg:#f7f7fb; --text:#1f2937; --muted:#6b7280; --card:#fff;
+        --radius:18px; --shadow:0 10px 30px rgba(0,0,0,.06);
+        --ring: 0 0 0 6px rgba(37,99,235,.08);
+        --accent:#111827;
+    }
+    * {
+        box-sizing:border-box
+    }
+    body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font: 16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, "Helvetica Neue", Arial, "Apple Color Emoji","Segoe UI Emoji"
+    }
+    .wrap {
+        max-width:1160px;
+        margin:0 auto;
+        padding:56px 20px
+    }
+    .hero {
+        text-align:center;
+        margin-bottom:28px
+    }
+    .hero h1 {
+        font-size:40px;
+        line-height:1.1;
+        margin:0 0 12px
+    }
+    .hero p {
+        color:var(--muted);
+        margin:0 auto;
+        max-width:720px
+    }
+    .grid {
+        display:grid;
+        gap:22px;
+        grid-template-columns:repeat(12,1fr);
+        margin-top:26px
+    }
+    .col {
+        grid-column:span 12;
+    }
+    @media(min-width:760px) {
+        .col{grid-column:span 6}
+    }
+    @media(min-width:1024px) {
+        .col{grid-column:span 4}
+    }
+    .card{
+        background: var(--card);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        padding: 26px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        position: relative;
+        transition: transform .18s ease, box-shadow .18s ease;
+        border: 1px solid transparent;
+    }
+    .card:hover{
+        transform: translateY(-2px);
+        box-shadow: 0 16px 40px rgba(0,0,0,.08)
+    }
+    .badge{
+        position: absolute;
+        top: 14px;
+        right: 14px;
+        background: #111827;
+        color: #fff;
+        font-weight: 600;
+        font-size: 12px;
+        padding: 6px 10px;
+        border-radius: 999px;
+        letter-spacing: .2px;
+    }
+    .top{
+        display: flex;
+        align-items: center;
+        gap: 14px
+    }
+    .tvimg{
+        width: 64px;
+        height: 64px;
+        object-fit: contain;
+        filter: drop-shadow(0 2px 8px rgba(0,0,0,.15));
+    }
+    h2{
+        font-size: 22px;
+        margin: 0
+    }
+    .desc{
+        color: var(--muted);
+        margin-top: -6px
+    }
+    ul{
+        margin: 0;
+        padding-left: 18px;
+        color: #374151
+    }
+    li{
+        margin: 6px 0
+    }
+    .price{
+        margin-top: auto
+    }
+    .parc{
+        font-size: 28px;
+        font-weight: 800;
+        margin: 4px 0
+    }
+    .avista{
+        color: var(--muted);
+        font-size: 14px
+    }
+    .actions{
+        margin-top: 14px;
+        display: flex;
+        gap: 10px
+    }
+    .btn{
+        appearance: none;
+        border: 0;
+        border-radius: 12px;
+        padding: 12px 16px;
+        font-weight: 700;
+        cursor: pointer;
+        background: #111827;
+        color: #fff;
+        box-shadow: var(--ring);
+        transition: transform .15s ease, box-shadow .15s ease, opacity .15s;
+    }
+    .btn.secondary{
+        background: #e5e7eb;
+        color: #111827;
+        box-shadow: none
+    }
+    .btn:hover{
+        transform: translateY(-1px)
+    }
+    .foot{
+        text-align: center;
+        color: #9ca3af;
+        font-size: 12px;
+        margin-top: 22px
+    }
+    /* cores dinâmicas por plano (borda e título) */
+    .tone{
+        display: inline-block;
+        height: 10px;
+        border-radius: 999px;
+        margin-top: 2px
+    }
+    .title{
+        display: flex;
+        align-items: baseline;
+        gap: 8px
+    }
+</style>

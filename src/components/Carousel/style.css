@@ -1,0 +1,229 @@
+/* Carousel Container - Institutional Responsive Design */
+.carousel-container {
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+    background: #f8f9fa;
+}
+
+/* Main Carousel Styling */
+.institutional-carousel {
+    width: 100%;
+    height: 70vh; /* Altura responsiva baseada na viewport */
+    min-height: 400px; /* Altura mínima para dispositivos pequenos */
+    max-height: 600px; /* Altura máxima para telas grandes */
+}
+
+/* Slide Styling */
+.carousel-slide {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Image Wrapper */
+.carousel-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #2c3e50;
+}
+
+/* Image Styling */
+.carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: transform 0.6s ease-out;
+}
+
+/* Overlay for better text readability (if needed) */
+.carousel-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.1) 0%,
+        rgba(0, 0, 0, 0.2) 50%,
+        rgba(0, 0, 0, 0.3) 100%
+    );
+    pointer-events: none;
+}
+
+/* Custom Navigation Buttons */
+.carousel-button-prev,
+.carousel-button-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.4s ease-out;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.carousel-button-prev {
+    left: 20px;
+}
+
+.carousel-button-next {
+    right: 20px;
+}
+
+.carousel-button-prev:hover,
+.carousel-button-next:hover {
+    background: rgba(255, 255, 255, 1);
+    transform: translateY(-50%) scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-button-prev svg,
+.carousel-button-next svg {
+    color: #2c3e50;
+    transition: color 0.3s ease;
+}
+
+.carousel-button-prev:hover svg,
+.carousel-button-next:hover svg {
+    color: #3498db;
+}
+
+/* Pagination Styling */
+.institutional-carousel .swiper-pagination {
+    bottom: 20px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.institutional-carousel .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    opacity: 1;
+    margin: 0 6px;
+    transition: all 0.4s ease-out;
+}
+
+.institutional-carousel .swiper-pagination-bullet-active {
+    background: #3498db;
+    border-color: #3498db;
+    transform: scale(1.2);
+}
+
+/* Responsive Design */
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .institutional-carousel {
+        height: 60vh;
+        min-height: 350px;
+        max-height: 500px;
+    }
+    
+    .carousel-button-prev,
+    .carousel-button-next {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .carousel-button-prev {
+        left: 15px;
+    }
+    
+    .carousel-button-next {
+        right: 15px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .institutional-carousel {
+        height: 50vh;
+        min-height: 300px;
+        max-height: 400px;
+    }
+    
+    .carousel-button-prev,
+    .carousel-button-next {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .carousel-button-prev {
+        left: 10px;
+    }
+    
+    .carousel-button-next {
+        right: 10px;
+    }
+    
+    .carousel-button-prev svg,
+    .carousel-button-next svg {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .institutional-carousel .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+        margin: 0 4px;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    .institutional-carousel {
+        height: 45vh;
+        min-height: 250px;
+        max-height: 350px;
+    }
+    
+    .carousel-overlay {
+        background: linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.2) 0%,
+            rgba(0, 0, 0, 0.3) 50%,
+            rgba(0, 0, 0, 0.4) 100%
+        );
+    }
+}
+
+/* Animation for smooth transitions */
+@media (prefers-reduced-motion: no-preference) {
+    .carousel-image:hover {
+        transform: scale(1.02);
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .carousel-button-prev,
+    .carousel-button-next {
+        background: #ffffff;
+        border: 2px solid #000000;
+    }
+    
+    .carousel-overlay {
+        background: rgba(0, 0, 0, 0.6);
+    }
+}

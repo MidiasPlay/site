@@ -33,7 +33,7 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
                 {
                     section: 'Por segmento',
                     items: pageList.map((page) => ({
-                        label: page.heroTitle,
+                        label: page.segmentLabel,
                         href: `/${page.slug}`,
                         description: page.heroSubtitle,
                     })),
@@ -96,7 +96,7 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
                 },
             ],
         },
-        { label: 'Planos e Serviços', href: '/planos-e-servicos' },
+        { label: 'Planos e Serviços', href: '/planos' },
         { label: 'Demonstração', href: '/demonstracao' },
     ];
 
@@ -173,9 +173,9 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
                                             {section.items.map((link) => (
                                                 <a key={link.label} href={link.href} className="dropdown-link">
                                                     <span className="dropdown-link-title">{link.label}</span>
-                                                    {link.description && (
+                                                    {/* {link.description && (
                                                         <span className="dropdown-link-description">{link.description}</span>
-                                                    )}
+                                                    )} */}
                                                 </a>
                                             ))}
                                         </div>

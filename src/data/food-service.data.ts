@@ -4,7 +4,7 @@ export const foodService: PageType = {
     slug: 'food-service',
     segmentLabel: 'Food Service',
     heroKicker: '🍔',
-    heroTitle: 'Mídia Indoor para Restaurantes e Lanchonetes',
+    heroTitle: 'Mídia Indoor para Food Service',
     heroSubtitle: 'Atraia clientes e aumente suas vendas com comunicação visual irresistível.',
     heroImage: 'https://images.unsplash.com/photo-1528605248644-14dd04022da1',
     heroMedia: [
