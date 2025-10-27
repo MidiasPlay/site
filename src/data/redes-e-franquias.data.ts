@@ -27,18 +27,18 @@ export const redesDeLojasEFranquias: PageType = {
     intro:
         'A solução de Mídia Indoor MidiasPlay Padrão foi desenvolvida para redes de lojas e franquias que desejam manter um padrão de comunicação visual e promocional em todas as suas unidades. Com o MidiasPlay, é possível controlar remotamente os conteúdos exibidos em cada ponto de venda, gerenciar campanhas por região ou loja específica e garantir uma identidade unificada em toda a rede.',
     benefits: [
-        'Gestão centralizada de campanhas e conteúdos em múltiplas lojas.',
-        'Padronização da comunicação visual e promocional em toda a rede.',
-        'Programação segmentada por loja, região ou tipo de público.',
-        'Atualizações automáticas e em tempo real via plataforma web.',
-        'Redução de custos com impressão e logística de materiais promocionais.',
+        'Gestão centralizada de campanhas e conteúdos em múltiplas lojas',
+        'Padronização da comunicação visual e promocional em toda a rede',
+        'Programação segmentada por loja, região ou tipo de público',
+        'Atualizações automáticas e em tempo real via plataforma web',
+        'Redução de custos com impressão e logística de materiais promocionais',
     ],
     canShow: [
-        'Ofertas e promoções de produtos ou serviços.',
-        'Cardápios digitais e tabelas de preços atualizadas.',
-        'TV corporativa com comunicados internos e informativos.',
-        'Campanhas de marketing e anúncios publicitários.',
-        'Conteúdos dinâmicos e personalizados por loja ou região.',
+        'Ofertas e promoções de produtos ou serviços',
+        'Cardápios digitais e tabelas de preços atualizadas',
+        'TV corporativa com comunicados internos e informativos',
+        'Campanhas de marketing e anúncios publicitários',
+        'Conteúdos dinâmicos e personalizados por loja ou região',
     ],
     product: {
         id: 'midiasplay-padrao',

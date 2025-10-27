@@ -27,18 +27,18 @@ export const acougues: PageType = {
     intro:
         'A solução de Mídia Indoor MidiasPlay Padrão foi desenvolvida especialmente para açougues e casas de carnes que desejam modernizar sua comunicação com os clientes. Com o MidiasPlay, é possível exibir tabelas de preços, ofertas e promoções, além de vídeos e imagens de produtos de forma visual e dinâmica, criando uma experiência de compra mais informativa e atrativa.',
     benefits: [
-        'Atualização fácil de preços e promoções diretamente pela plataforma web.',
-        'Atraia a atenção dos clientes com vídeos e imagens de cortes e produtos especiais.',
-        'Aumente as vendas com campanhas visuais que destacam produtos do dia.',
-        'Melhore a experiência no ponto de venda com comunicação clara e moderna.',
-        'Transmita credibilidade e profissionalismo ao modernizar a fachada e o balcão de atendimento.',
+        'Atualização fácil de preços e promoções diretamente pela plataforma web',
+        'Atraia a atenção dos clientes com vídeos e imagens de cortes e produtos especiais',
+        'Aumente as vendas com campanhas visuais que destacam produtos do dia',
+        'Melhore a experiência no ponto de venda com comunicação clara e moderna',
+        'Transmita credibilidade e profissionalismo ao modernizar a fachada e o balcão de atendimento',
     ],
     canShow: [
-        'Tabela de preços de carnes e produtos frescos.',
-        'Ofertas e promoções do dia ou da semana.',
-        'Imagens e vídeos de produtos e cortes especiais.',
-        'Mensagens institucionais e comunicados internos.',
-        'Conteúdos de apoio como dicas de preparo ou receitas rápidas.',
+        'Tabela de preços de carnes e produtos frescos',
+        'Ofertas e promoções do dia ou da semana',
+        'Imagens e vídeos de produtos e cortes especiais',
+        'Mensagens institucionais e comunicados internos',
+        'Conteúdos de apoio como dicas de preparo ou receitas rápidas',
     ],
     product: {
         id: 'midiasplay-padrao',

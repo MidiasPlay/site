@@ -27,18 +27,18 @@ export const corporativo: PageType = {
     intro:
         'A solução de TV Corporativa MidiasPlay Padrão foi desenvolvida para empresas, escritórios, indústrias e ambientes corporativos que desejam aprimorar a comunicação interna e manter seus colaboradores informados em tempo real. Com o MidiasPlay, é possível exibir comunicados, metas, resultados e indicadores de forma visual e dinâmica, reforçando a cultura organizacional e o alinhamento entre equipes.',
     benefits: [
-        'Comunicação interna eficaz: mantenha todos informados sobre metas, resultados e novidades da empresa.',
-        'Transparência e engajamento: exiba indicadores e reconhecimentos de equipes em tempo real.',
-        'Gestão centralizada: atualize conteúdos de forma remota e imediata via plataforma web.',
-        'Ambiente conectado: inclua informações úteis como tempo, hora e notícias corporativas.',
-        'Modernização do ambiente: displays elegantes que reforçam a imagem tecnológica e inovadora da empresa.',
+        'Comunicação interna eficaz: mantenha todos informados sobre metas, resultados e novidades da empresa',
+        'Transparência e engajamento: exiba indicadores e reconhecimentos de equipes em tempo real',
+        'Gestão centralizada: atualize conteúdos de forma remota e imediata via plataforma web',
+        'Ambiente conectado: inclua informações úteis como tempo, hora e notícias corporativas',
+        'Modernização do ambiente: displays elegantes que reforçam a imagem tecnológica e inovadora da empresa',
     ],
     canShow: [
-        'Comunicados para colaboradores e gestores.',
-        'Demonstração de resultados e estatísticas de produção.',
-        'Indicadores de performance e produtividade (KPIs).',
-        'Informações em tempo real (tempo, hora, notícias).',
-        'Mapas e orientações internas (layout do local, setores, rotas de segurança).',
+        'Comunicados para colaboradores e gestores',
+        'Demonstração de resultados e estatísticas de produção',
+        'Indicadores de performance e produtividade',
+        'Informações em tempo real (tempo, hora, notícias)',
+        'Mapas e orientações internas (layout do local, setores, rotas de segurança)',
     ],
     product: {
         id: 'midiasplay-padrao',

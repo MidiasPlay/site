@@ -27,18 +27,18 @@ export const agenciasPublicidade: PageType = {
     intro:
         'A MidiasPlay oferece às agências de publicidade, marketing, comunicação e design uma oportunidade de expandir seus serviços com a revenda e gestão de soluções de Mídia Indoor para clientes dos mais diversos segmentos. Com o MidiasPlay, sua agência pode oferecer campanhas dinâmicas, programadas e personalizadas — unindo conteúdo, tecnologia e estratégia para maximizar o impacto visual de cada marca atendida.',
     benefits: [
-        'Amplie seu portfólio de serviços oferecendo mídia indoor integrada aos seus projetos de marketing.',
-        'Gere receita recorrente com a revenda e gestão de telas e campanhas para seus clientes.',
-        'Gerencie múltiplos clientes e locais com uma única plataforma web intuitiva.',
-        'Crie experiências personalizadas para cada segmento (varejo, food service, saúde, corporativo etc.).',
-        'Fortaleça o posicionamento da sua agência como provedora de soluções completas de comunicação.',
+        'Amplie seu portfólio de serviços oferecendo mídia indoor integrada aos seus projetos de marketing',
+        'Gere receita recorrente com a revenda e gestão de telas e campanhas para seus clientes',
+        'Gerencie múltiplos clientes e locais com uma única plataforma web intuitiva',
+        'Crie experiências personalizadas para cada segmento (varejo, food service, saúde, corporativo, etc)',
+        'Fortaleça o posicionamento da sua agência como provedora de soluções completas de comunicação',
     ],
     canShow: [
-        'Ofertas e promoções de produtos ou serviços.',
-        'Cardápios e tabelas de preços dinâmicas.',
-        'Campanhas de marketing e anúncios publicitários.',
-        'TV corporativa e comunicação interna.',
-        'Mensagens institucionais e identidades visuais personalizadas.',
+        'Ofertas e promoções de produtos ou serviços',
+        'Cardápios e tabelas de preços dinâmicas',
+        'Campanhas de marketing e anúncios publicitários',
+        'TV corporativa e comunicação interna',
+        'Mensagens institucionais e identidades visuais personalizadas',
     ],
     product: {
         id: 'midiasplay-padrao',

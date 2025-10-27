@@ -27,18 +27,18 @@ export const convenienciasPadariasPostos: PageType = {
     intro:
         'A solução de Mídia Indoor MidiasPlay Padrão é perfeita para conveniências, padarias e postos de combustível que desejam modernizar sua comunicação com os clientes. Com o MidiasPlay, é possível exibir tabelas de preços, promoções, ofertas e vídeos de produtos de forma dinâmica, criando um ambiente mais atrativo e estimulando as vendas por impulso.',
     benefits: [
-        'Destaque produtos e promoções em tempo real com conteúdo visual impactante.',
-        'Facilidade na atualização de preços e campanhas diretamente pelo painel web.',
-        'Atraia clientes com vídeos e imagens de produtos e combos promocionais.',
-        'Transforme o ambiente em um espaço moderno e conectado.',
-        'Aumente o ticket médio exibindo ofertas complementares de forma estratégica.',
+        'Destaque produtos e promoções em tempo real com conteúdo visual impactante',
+        'Facilidade na atualização de preços e campanhas diretamente pelo painel web',
+        'Atraia clientes com vídeos e imagens de produtos e combos promocionais',
+        'Transforme o ambiente em um espaço moderno e conectado',
+        'Aumente o ticket médio exibindo ofertas complementares de forma estratégica',
     ],
     canShow: [
-        'Tabela de preços e promoções de produtos.',
-        'Ofertas de combos e campanhas sazonais.',
-        'Imagens e vídeos de produtos e bebidas.',
-        'Anúncios institucionais e mensagens de parceiros.',
-        'Conteúdos de utilidade pública (hora, clima, trânsito).',
+        'Tabela de preços e promoções de produtos',
+        'Ofertas de combos e campanhas sazonais',
+        'Imagens e vídeos de produtos e bebidas',
+        'Anúncios institucionais e mensagens de parceiros',
+        'Conteúdos de utilidade pública (hora, clima, trânsito)',
     ],
     product: {
         id: 'midiasplay-padrao',

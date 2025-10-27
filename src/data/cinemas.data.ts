@@ -27,18 +27,18 @@ export const cinemas: PageType = {
     intro:
         'A solução de Mídia Indoor MidiasPlay Padrão foi criada para cinemas que desejam proporcionar uma experiência ainda mais imersiva e informativa para o público. Exiba trailers de lançamentos, tabelas de horários, vídeos interativos e informações em tempo real de forma totalmente automatizada e sincronizada com a identidade do seu cinema.',
     benefits: [
-        'Divulgue trailers de filmes e próximos lançamentos de forma atrativa.',
-        'Exiba a tabela de horários e sessões em tempo real.',
-        'Mantenha o público informado com conteúdos como hora, clima e notícias.',
-        'Crie playlists dinâmicas que combinam informação e entretenimento.',
-        'Transforme o ambiente do cinema em uma experiência tecnológica completa.',
+        'Divulgue trailers de filmes e próximos lançamentos de forma atrativa',
+        'Exiba a tabela de horários e sessões em tempo real',
+        'Mantenha o público informado com conteúdos como hora, clima e notícias',
+        'Crie playlists dinâmicas que combinam informação e entretenimento',
+        'Transforme o ambiente do cinema em uma experiência tecnológica completa',
     ],
     canShow: [
-        'Trailers de filmes e próximos lançamentos.',
-        'Tabela de horários e sessões atualizadas.',
-        'Vídeos interativos e informativos.',
-        'Informações em tempo real (hora, tempo, notícias).',
-        'Mensagens institucionais e promoções de combos e produtos da bombonière.',
+        'Trailers de filmes e próximos lançamentos',
+        'Tabela de horários e sessões atualizadas',
+        'Vídeos interativos e informativos',
+        'Informações em tempo real (hora, tempo, notícias)',
+        'Mensagens institucionais e promoções de combos e produtos da bombonière',
     ],
     product: {
         id: 'midiasplay-padrao',

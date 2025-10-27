@@ -22,18 +22,18 @@ export const foodService: PageType = {
     intro:
         'A solução de Mídia Indoor MidiasPlay Fila é perfeita para o setor de Food Service, atendendo restaurantes, bares, lanchonetes, sorveterias e açaiterias que desejam destacar seus produtos e promoções de forma dinâmica e atrativa. Com o MidiasPlay, você exibe cardápios digitais, controle de filas, vídeos de produtos e campanhas visuais que despertam o apetite e aumentam o ticket médio.',
     benefits: [
-        'Atraia a atenção dos clientes com cardápios dinâmicos e imagens de alta qualidade.',
-        'Divulgue ofertas, combos e lançamentos em tempo real com controle remoto pelo painel web.',
-        'Reduza filas e organize o atendimento com o modo de exibição por senhas.',
-        'Crie um ambiente moderno e envolvente com vídeos e artes customizadas.',
-        'Aumente as vendas por impulso exibindo produtos e promoções estratégicas durante a espera.',
+        'Atraia a atenção dos clientes com cardápios dinâmicos e imagens de alta qualidade',
+        'Divulgue ofertas, combos e lançamentos em tempo real com controle remoto pelo painel web',
+        'Reduza filas e organize o atendimento com o modo de exibição por senhas',
+        'Crie um ambiente moderno e envolvente com vídeos e artes customizadas',
+        'Aumente as vendas por impulso exibindo produtos e promoções estratégicas durante a espera',
     ],
     canShow: [
-        'Cardápios digitais com fotos e preços atualizados.',
-        'Ofertas e combos promocionais em destaque.',
-        'Vídeos e imagens de produtos e preparos.',
-        'Controle de filas por senha com design personalizado.',
-        'Anúncios de parceiros e campanhas sazonais (como delivery e datas comemorativas).',
+        'Cardápios digitais com fotos e preços atualizados',
+        'Ofertas e combos promocionais em destaque',
+        'Vídeos e imagens de produtos e preparos',
+        'Controle de filas por senha com design personalizado',
+        'Anúncios de parceiros e campanhas sazonais (como delivery e datas comemorativas)',
     ],
     product: {
         id: 'midiasplay-fila',

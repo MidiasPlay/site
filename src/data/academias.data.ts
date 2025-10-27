@@ -34,11 +34,11 @@ export const academias: PageType = {
         'Aumente a fidelização oferecendo uma experiência visual diferenciada.',
     ],
     canShow: [
-        'Vídeos interativos e treinos guiados.',
-        'Trailres de filmes e conteúdos de entretenimento.',
-        'Informações em tempo real (hora, tempo, notícias).',
-        'Mensagens motivacionais e dicas de saúde.',
-        'Divulgação de planos e serviços da academia.',
+        'Vídeos interativos e treinos guiados',
+        'Trailres de filmes e conteúdos de entretenimento',
+        'Informações em tempo real (hora, tempo, notícias)',
+        'Mensagens motivacionais e dicas de saúde',
+        'Divulgação de planos e serviços da academia',
     ],
     product: {
         id: 'midiasplay-padrao',

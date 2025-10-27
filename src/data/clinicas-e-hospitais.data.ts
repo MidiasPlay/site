@@ -22,18 +22,18 @@ export const clinicasEHospitais: PageType = {
     intro:
         'A solução de Mídia Indoor MidiasPlay Fila foi desenvolvida especialmente para o setor de saúde, atendendo clínicas, hospitais e consultórios que desejam oferecer uma experiência moderna, organizada e informativa em suas recepções e salas de espera. Com o MidiasPlay Fila, é possível integrar o controle de senhas e chamadas de atendimento a uma exibição atrativa de conteúdos multimídia.',
     benefits: [
-        'Organização e fluidez no atendimento: controle de filas com senhas automáticas e exibição em tempo real.',
-        'Comunicação eficiente: destaque serviços, planos de saúde e equipe clínica com conteúdo visual atrativo.',
-        'Ambiente mais agradável: reduza a percepção de espera com vídeos e artes informativas personalizadas.',
-        'Monetização do espaço: inclua anunciantes locais ou parceiros de saúde para gerar receita adicional.',
-        'Gestão simplificada: controle remoto e atualização em tempo real via plataforma web.',
+        'Organização e fluidez no atendimento: controle de filas com senhas automáticas e exibição em tempo real',
+        'Comunicação eficiente: destaque serviços, planos de saúde e equipe clínica com conteúdo visual atrativo',
+        'Ambiente mais agradável: reduza a percepção de espera com vídeos e artes informativas personalizadas',
+        'Monetização do espaço: inclua anunciantes locais ou parceiros de saúde para gerar receita adicional',
+        'Gestão simplificada: controle remoto e atualização em tempo real via plataforma web',
     ],
     canShow: [
-        'Painel de chamada de senhas (número e consultório).',
-        'Vídeos institucionais, campanhas e orientações médicas.',
-        'Informações em tempo real (data, hora e clima).',
-        'Anúncios publicitários e avisos internos.',
-        'Artes customizadas com a identidade da clínica.',
+        'Painel de chamada de senhas (número e consultório)',
+        'Vídeos institucionais, campanhas e orientações médicas',
+        'Informações em tempo real (data, hora e clima)',
+        'Anúncios publicitários e avisos internos',
+        'Artes customizadas com a identidade da clínica',
     ],
     product: {
         id: 'midiasplay-fila',

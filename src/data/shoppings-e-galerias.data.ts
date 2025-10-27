@@ -27,18 +27,18 @@ export const shoppingsEGalerias: PageType = {
     intro:
         'A solução de Mídia Indoor MidiasPlay Padrão foi desenvolvida especialmente para shoppings centers, galerias comerciais e centros empresariais que desejam modernizar sua comunicação e fortalecer a visibilidade das marcas presentes em seus ambientes. Com o MidiasPlay, é possível centralizar e automatizar a exibição de conteúdos multimídia em diversos pontos do local — entradas, corredores, elevadores e praças de alimentação — garantindo uma comunicação visual envolvente e eficiente.',
     benefits: [
-        'Valorização das marcas: destaque campanhas, produtos e serviços das lojas com vídeos e imagens atrativas.',
-        'Aumento do engajamento: transforme o tempo de permanência em uma experiência visual envolvente e informativa.',
-        'Gestão centralizada: atualize conteúdos remotamente e em tempo real em todos os displays.',
-        'Informação útil e contextual: exiba dados dinâmicos como tempo, hora e notícias locais.',
-        'Inovação e modernidade: comunique-se com visitantes e lojistas de forma profissional e tecnológica.',
+        'Valorização das marcas: destaque campanhas, produtos e serviços das lojas com vídeos e imagens atrativas',
+        'Aumento do engajamento: transforme o tempo de permanência em uma experiência visual envolvente e informativa',
+        'Gestão centralizada: atualize conteúdos remotamente e em tempo real em todos os displays',
+        'Informação útil e contextual: exiba dados dinâmicos como tempo, hora e notícias locais',
+        'Inovação e modernidade: comunique-se com visitantes e lojistas de forma profissional e tecnológica',
     ],
     canShow: [
-        'Anúncios publicitários e institucionais.',
-        'Imagens e vídeos de produtos e serviços.',
-        'Informações em tempo real (tempo, hora, notícias).',
-        'Mapas interativos do local e direcionamento de áreas.',
-        'Campanhas promocionais das lojas participantes.',
+        'Anúncios publicitários e institucionais',
+        'Imagens e vídeos de produtos e serviços',
+        'Informações em tempo real (tempo, hora, notícias)',
+        'Mapas interativos do local e direcionamento de áreas',
+        'Campanhas promocionais das lojas participantes',
     ],
     product: {
         id: 'midiasplay-padrao',
