@@ -26,8 +26,8 @@ export const varejo: PageType = {
         },
     ],
     intro:
-        'O setor de **Varejo** é o coração do consumo e o segmento de maior potencial para o MidiasPlay. Nossa solução de Mídia Indoor oferece uma experiência completa para **supermercados, farmácias, lojas de roupas, materiais de construção, pet shops e comércios em geral**, combinando tecnologia, comunicação e estratégia. \
-        Com o MidiasPlay, você pode **potencializar vendas, promover produtos, informar clientes e engajar colaboradores** — tudo em uma única plataforma integrada.',
+        'O setor de Varejo é o coração do consumo e o segmento de maior potencial para mídia indoor. Nossa solução oferece uma experiência completa para supermercados, farmácias, lojas de roupas, materiais de construção, pet shops e comércios em geral, combinando tecnologia, comunicação e estratégia. \
+        Com o MidiasPlay, você pode potencializar vendas, promover produtos, informar clientes e engajar colaboradores — tudo em uma única plataforma integrada.',
     benefits: [
         'Aumente o faturamento com campanhas de vídeo e promoções dinâmicas nos pontos de maior visibilidade',
         'Gerencie toda a comunicação visual da sua loja de forma centralizada e em tempo real',

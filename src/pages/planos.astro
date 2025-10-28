@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import SelecionarEstadoModalWrapper from '../components/SelecionarEstadoModal/Wrapper.tsx';
 import '../styles/container.css';
 ---
 
@@ -63,7 +64,7 @@ import '../styles/container.css';
                         </ul>
                     </div>
 
-                    <button class="plan-button">Escolher Plano</button>
+                    <button class="plan-button" id="btn-promo-box" data-plan="Promo Box">Escolher Plano</button>
                 </div>
 
                 <!-- Plano Fila Box -->
@@ -110,7 +111,7 @@ import '../styles/container.css';
                         </ul>
                     </div> -->
 
-                    <button class="plan-button premium">Escolher Plano</button>
+                    <button class="plan-button premium" id="btn-promo-box-fila" data-plan="Promo Box Fila">Escolher Plano</button>
                 </div>
 
                 <!-- Plano Custom Box -->
@@ -120,6 +121,11 @@ import '../styles/container.css';
                         <!-- <div class="plan-badge">Personalizado</div> -->
                     </div>
                     <div class="plan-price-container">
+                        <!-- <div class="plan-price"> -->
+                            <!-- <span class="currency">Sob</span> -->
+                            <!-- <span class="demanda">Sob-</span> -->
+                            <!-- <span class="period">Demanda</span> -->
+                        <!-- </div> -->
                         <!-- <div class="plan-price">
                             <span class="currency">R$</span>
                             <span class="amount">199</span>
@@ -147,7 +153,7 @@ import '../styles/container.css';
                         </ul>
                     </div>
 
-                    <button class="plan-button">Falar com Vendas</button>
+                    <button class="plan-button" id="btn-promo-box-custom" data-plan="Promo Box Custom">Falar com Vendas</button>
                 </div>
             </div>
         </div>
@@ -203,6 +209,9 @@ import '../styles/container.css';
             </div>
         </div>
     </section> -->
+    
+    <!-- Modal de Seleção de Estado -->
+    <SelecionarEstadoModalWrapper client:load />
 </Layout>
 
 <style>
@@ -385,6 +394,13 @@ import '../styles/container.css';
         font-size: 1.125rem;
         color: #64748b;
         font-weight: 500;
+    }
+
+    .plan-price .demanda {
+        font-size: 2.5rem;
+        font-weight: 800;
+        color: #1e293b;
+        margin-left: 0.25rem;
     }
 
     .plan-price-annual {
