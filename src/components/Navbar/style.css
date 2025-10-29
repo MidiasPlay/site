@@ -188,7 +188,7 @@
 .mobile-dropdown-menu {
     list-style: none;
     max-height: 0;
-    overflow: hidden;
+    overflow: scroll;
     transition: max-height 0.3s ease;
     background: #f8f9fa;
     margin: 0 -1rem;
