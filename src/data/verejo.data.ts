@@ -7,7 +7,7 @@ export const varejo: PageType = {
     heroTitle: 'Mídia Indoor para o Varejo',
     heroSubtitle:
         'Transforme sua loja em uma poderosa vitrine digital: aumente vendas, engaje clientes e comunique com eficiência.',
-    heroImage: 'https://images.unsplash.com/photo-1587560699334-cc4ff634909a?auto=format&fit=crop&w=1600&q=80',
+    heroImage: '/supermercado-01.png',
     heroMedia: [
         {
             type: 'image',

@@ -6,18 +6,18 @@ export const academias: PageType = {
     heroKicker: '💪',
     heroTitle: 'Mídia Indoor para Academias',
     heroSubtitle: 'Crie programas turbinados com vídeos e informações que motivam e engajam seus clientes.',
-    heroImage: 'https://images.unsplash.com/photo-1579758629934-095f6d8d51fe?auto=format&fit=crop&w=1600&q=80',
+    heroImage: '/academia-01.png',
     heroMedia: [
         {
             type: 'image',
-            src: 'https://images.unsplash.com/photo-1593079831268-3381b0db4a77?auto=format&fit=crop&w=1600&q=80',
+            src: '/academia-02.png',
             alt: 'Academia moderna com monitores exibindo vídeos de treino'
         },
-        {
-            type: 'image',
-            src: 'https://images.unsplash.com/photo-1576671081837-49000212a1e3?auto=format&fit=crop&w=1600&q=80',
-            alt: 'Painel de mídia indoor exibindo conteúdos motivacionais em academia'
-        },
+        // {
+        //     type: 'image',
+        //     src: 'https://images.unsplash.com/photo-1576671081837-49000212a1e3?auto=format&fit=crop&w=1600&q=80',
+        //     alt: 'Painel de mídia indoor exibindo conteúdos motivacionais em academia'
+        // },
         {
             type: 'image',
             src: 'https://images.unsplash.com/photo-1605296867304-46d5465a13f1?auto=format&fit=crop&w=1600&q=80',
