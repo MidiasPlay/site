@@ -7,7 +7,7 @@ export enum EstadoEnum {
     SP = 'SP', TO = 'TO'
 }
 
-export const EstadoEnumLabel = {
+export const estadoEnumLabel = {
     [EstadoEnum.AC]: 'Acre',
     [EstadoEnum.AL]: 'Alagoas',
     [EstadoEnum.AM]: 'Amazonas',
@@ -39,7 +39,7 @@ export const EstadoEnumLabel = {
 
 export const estadoOptionsList = Object.values(EstadoEnum).map((estado) => ({
     value: estado,
-    label: EstadoEnumLabel[estado],
+    label: estadoEnumLabel[estado],
 }));
 
 export const estadoOptionsMap = new Map(estadoOptionsList.map((estado) => [estado.value, estado.label]));

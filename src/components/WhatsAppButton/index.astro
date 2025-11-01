@@ -1,4 +1,6 @@
 ---
+import SelecionarEstadoModalWrapper from '../SelecionarEstadoModal/Wrapper';
+
 interface Props {
     phoneNumber?: string;
     message?: string;
@@ -8,19 +10,15 @@ const {
     phoneNumber = "5511999999999", // Substitua pelo número real da empresa
     message = "Olá! Gostaria de saber mais sobre os serviços da Mídias Play."
 } = Astro.props;
-
-const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 ---
 
-<a
-    href={whatsappUrl} 
-    target="_blank" 
-    rel="noopener noreferrer"
+<button
+    id="btn-whatsapp"
     class="whatsapp-button"
-    aria-label="Conversar no WhatsApp"
+    aria-label="Abrir modal do WhatsApp"
 >
     <i class="fab fa-whatsapp"></i>
-</a>
+</button>
 
 <style>
     .whatsapp-button {

@@ -1,25 +1,57 @@
 import React, { useState } from 'react';
-import { EstadoEnum, estadoOptionsList } from './estado.enum';
+import { EstadoEnum, estadoEnumLabel, estadoOptionsList } from './estado.enum';
 import './style.css';
 
 type SelecionarEstadoModalProps = {
     isOpen: boolean;
     onClose: () => void;
-    phoneNumber?: string; // Número do WhatsApp da empresa
-    selectedPlan?: string; // Nome do plano selecionado
+    selectedPlan?: string;
 }
 
-export const SelecionarEstadoModal: React.FC<SelecionarEstadoModalProps> = ({
-    isOpen,
-    onClose,
-    phoneNumber = '5511999999999', // Número padrão, pode ser passado como prop
-    selectedPlan = ''
-}) => {
+export const SelecionarEstadoModal: React.FC<SelecionarEstadoModalProps> = ({ isOpen, onClose, selectedPlan = '' }) => {
     const [selectedEstado, setSelectedEstado] = useState<EstadoEnum | ''>('');
 
     const handleEstadoChange = (evento: React.ChangeEvent<HTMLSelectElement>) => {
         setSelectedEstado(evento.target.value as EstadoEnum);
     };
+
+    function getPhoneNumber(estado: EstadoEnum): string {
+        // Mapeamento de estados para números de WhatsApp específicos
+        const NUMERO_WILLIAN = '5541996903121';
+        const NUMERO_SAMUEL = '553181018181';
+
+        const estadoPhoneMap: Record<EstadoEnum, string> = {
+            [EstadoEnum.AC]: NUMERO_SAMUEL,
+            [EstadoEnum.AL]: NUMERO_SAMUEL,
+            [EstadoEnum.AM]: NUMERO_SAMUEL,
+            [EstadoEnum.AP]: NUMERO_SAMUEL,
+            [EstadoEnum.BA]: NUMERO_SAMUEL,
+            [EstadoEnum.CE]: NUMERO_SAMUEL,
+            [EstadoEnum.DF]: NUMERO_WILLIAN,
+            [EstadoEnum.ES]: NUMERO_SAMUEL,
+            [EstadoEnum.GO]: NUMERO_WILLIAN,
+            [EstadoEnum.MA]: NUMERO_SAMUEL,
+            [EstadoEnum.MG]: NUMERO_SAMUEL,
+            [EstadoEnum.MS]: NUMERO_WILLIAN,
+            [EstadoEnum.MT]: NUMERO_WILLIAN,
+            [EstadoEnum.PA]: NUMERO_SAMUEL,
+            [EstadoEnum.PB]: NUMERO_SAMUEL,
+            [EstadoEnum.PE]: NUMERO_SAMUEL,
+            [EstadoEnum.PI]: NUMERO_SAMUEL,
+            [EstadoEnum.PR]: NUMERO_WILLIAN,
+            [EstadoEnum.RJ]: NUMERO_WILLIAN,
+            [EstadoEnum.RN]: NUMERO_SAMUEL,
+            [EstadoEnum.RO]: NUMERO_SAMUEL,
+            [EstadoEnum.RR]: NUMERO_SAMUEL,
+            [EstadoEnum.RS]: NUMERO_WILLIAN,
+            [EstadoEnum.SC]: NUMERO_WILLIAN,
+            [EstadoEnum.SE]: NUMERO_SAMUEL,
+            [EstadoEnum.SP]: NUMERO_WILLIAN,
+            [EstadoEnum.TO]: NUMERO_WILLIAN,
+        };
+
+        return estadoPhoneMap[estado];
+    }
 
     const handleWhatsAppClick = () => {
         if (!selectedEstado) {
@@ -27,24 +59,25 @@ export const SelecionarEstadoModal: React.FC<SelecionarEstadoModalProps> = ({
             return;
         }
 
-        const estadoLabel = estadoOptionsList.find(estado => estado.value === selectedEstado)?.label;
-        let message = `Olá! Tenho interesse nos serviços do MidiasPlay para o estado: ${estadoLabel} (${selectedEstado})`;
-        
+        let message = `Olá! Tenho interesse nos serviços do MidiasPlay para o estado: ${estadoEnumLabel[selectedEstado]} (${selectedEstado})`;
         if (selectedPlan) {
             message += `\n\nPlano de interesse: ${selectedPlan}`;
         }
-        
+
+        const phoneNumber = getPhoneNumber(selectedEstado);
         const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
         window.open(whatsappUrl, '_blank');
     };
 
     const handleModalClick = (e: React.MouseEvent) => {
-    // Impede o fechamento do modal quando clicar dentro do conteúdo
-    e.stopPropagation();
+        // Impede o fechamento do modal quando clicar dentro do conteúdo
+        e.stopPropagation();
     };
 
-    if (!isOpen) return null;
+    if (!isOpen) {
+        return null;
+    }
 
     return (
         <div className="modal-overlay" onClick={onClose}>
