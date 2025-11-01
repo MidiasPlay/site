@@ -207,11 +207,11 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
                             )}
                         </li>
                     ))}
-                    <li>
+                    {/* <li>
                         <a href="/contato" className="mobile-cta-button" onClick={closeMobileMenu}>
                         Falar Conosco
                         </a>
-                    </li>
+                    </li> */}
                 </ul>
             </div>
         </nav>
