@@ -1,0 +1,106 @@
+---
+import Planos from '../components/Planos';
+import Layout from '../layouts/Layout.astro';
+import '../styles/container.css';
+---
+
+<Layout title="Planos">
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container-hero center-hero">
+            <h1>Escolha o Plano Ideal para Sua Empresa</h1>
+            <p class="lead">
+                Transforme seus espaços com nossas soluções completas de mídia indoor
+            </p>
+            <!-- <div class="cta">
+                <a href="#padrao" class="btn btn-primary">MidiasPlay Padrão</a>
+                <a href="#fila" class="btn btn-outline">MidiasPlay Fila</a>
+            </div> -->
+        </div>
+    </section>
+
+    <Planos client:load />
+
+    
+
+    <!-- Seção de benefícios -->
+    <!-- <section class="benefits-section">
+        <div class="container">
+            <h2>Por que Escolher o MidiasPlay?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <i class="fas fa-clock"></i>
+                    <h3>Instalação Rápida</h3>
+                    <p>Configure tudo em menos de 10 minutos</p>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-headset"></i>
+                    <h3>Suporte Dedicado</h3>
+                    <p>Equipe especializada para te ajudar sempre</p>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>ROI Garantido</h3>
+                    <p>Aumente vendas e melhore comunicação</p>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-lock"></i>
+                    <h3>Dados Seguros</h3>
+                    <p>Plataforma com certificação de segurança</p>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    
+    <!-- Modal de Seleção de Estado -->
+</Layout>
+
+<style>
+    :root{
+        --bg: #0e1b4d;
+        --bg-2: #0a1540;
+        --blue: #2f6cf6;
+        --indigo: #6754f3;
+        --text: #1f2937;
+        --muted: #5b6474;
+        --card: #ffffff;
+        --border: #e6e8ee;
+        --radius: 16px;
+        --shadow: 0 10px 30px rgba(10, 21, 64, .08);
+        --shadow-lg: 0 20px 50px rgba(10, 21, 64, .12);
+        --container: 1160px;
+    }
+
+    html, body {
+        margin: 0;
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+        color: var(--text);
+        background: #f7f8fb;
+        line-height: 1.5;
+    }
+    
+    .hero {
+        background: radial-gradient(1200px 400px at 50% -10%, #2f6cf666, transparent), linear-gradient(135deg, var(--bg), var(--bg-2));
+        color: #fff;
+        padding: 72px 0 64px;
+    }
+    .hero h1 {
+        font-size: 48px;
+        margin: 0 0 8px;
+        letter-spacing: -0.02em;
+    }
+    .lead {
+        font-size: 18px;
+        opacity: .95;
+    }
+
+    .container-hero {
+        max-width: var(--container);
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    .center-hero {
+        text-align: center;
+    }
+</style>

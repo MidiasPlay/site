@@ -6,13 +6,15 @@ type SelecionarEstadoModalProps = {
     isOpen: boolean;
     onClose: () => void;
     selectedPlan?: string;
+    onSelectEstado?: (estado: EstadoEnum) => void;
 }
 
-export const SelecionarEstadoModal: React.FC<SelecionarEstadoModalProps> = ({ isOpen, onClose, selectedPlan = '' }) => {
+export const SelecionarEstadoModal: React.FC<SelecionarEstadoModalProps> = ({ isOpen, onClose, selectedPlan = '', onSelectEstado }) => {
     const [selectedEstado, setSelectedEstado] = useState<EstadoEnum | ''>('');
 
     const handleEstadoChange = (evento: React.ChangeEvent<HTMLSelectElement>) => {
         setSelectedEstado(evento.target.value as EstadoEnum);
+        console.log('Estado selecionado:', evento.target.value);
     };
 
     function getPhoneNumber(estado: EstadoEnum): string {
@@ -84,7 +86,9 @@ export const SelecionarEstadoModal: React.FC<SelecionarEstadoModalProps> = ({ is
             <div className="modal-content" onClick={handleModalClick}>
                 <div className="modal-header">
                     <h2>{selectedPlan ? `${selectedPlan} - Selecione seu Estado` : 'Selecione seu Estado'}</h2>
-                    <button className="close-button" onClick={onClose}>×</button>
+                    {!onSelectEstado &&
+                        <button className="close-button" onClick={onClose}>×</button>
+                    }
                 </div>
 
                 <div className="modal-body">
@@ -94,7 +98,7 @@ export const SelecionarEstadoModal: React.FC<SelecionarEstadoModalProps> = ({ is
                         <label htmlFor="estado-select">Estado:</label>
                         <select
                             id="estado-select"
-                            value={selectedEstado}
+                            value={selectedEstado || ''}
                             onChange={handleEstadoChange}
                             className="estado-select"
                         >
@@ -109,14 +113,29 @@ export const SelecionarEstadoModal: React.FC<SelecionarEstadoModalProps> = ({ is
                 </div>
 
                 <div className="modal-footer">
-                    <button 
-                        className="whatsapp-button"
-                        onClick={handleWhatsAppClick}
-                        disabled={!selectedEstado}
-                    >
-                        <span className="whatsapp-icon">📱</span>
-                        Falar no WhatsApp
-                    </button>
+                    {onSelectEstado ? (
+                        <button
+                            className="confirm-button"
+                            onClick={() => {
+                                if (selectedEstado) {
+                                    onSelectEstado(selectedEstado);
+                                }
+                            }}
+                            disabled={!selectedEstado}
+                        >
+                            Confirmar
+                        </button>
+                    ) : (
+                        <button
+                            className="whatsapp-button-modal"
+                            onClick={handleWhatsAppClick}
+                            disabled={!selectedEstado}
+                        >
+                            <span className="whatsapp-icon">📱</span>
+                            Falar no WhatsApp
+                        </button>
+                    )}
+                    
                 </div>
             </div>
         </div>

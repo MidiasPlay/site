@@ -8,7 +8,7 @@ const title = props.title + ' - MidiasPlay' || 'MidiasPlay - Soluções em Digit
 
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer/index.astro';
-import WhatsAppButton from '../components/WhatsAppButton/index.astro';
+import WhatsAppButton from '../components/WhatsAppButton';
 import SelecionarEstadoModalWrapper from '../components/SelecionarEstadoModal/Wrapper';
 ---
 
@@ -36,7 +36,7 @@ import SelecionarEstadoModalWrapper from '../components/SelecionarEstadoModal/Wr
 			<slot />
 		</main>
 		<Footer />
-		<WhatsAppButton />
+        <WhatsAppButton client:load />
         <SelecionarEstadoModalWrapper client:load />
 	</body>
 </html>

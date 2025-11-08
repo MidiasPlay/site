@@ -53,7 +53,7 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
             label: 'Produto',
             href: '/produto',
         },
-        { label: 'Planos e Serviços', href: '/planos' },
+        { label: 'Planos e Preços', href: '/planos-e-precos' },
         // { label: 'Demonstração', href: '/demonstracao' },
     ];
 
