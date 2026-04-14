@@ -6,7 +6,7 @@ export const corporativo: PageType = {
     heroKicker: '🏢',
     heroTitle: 'TV Corporativa para Empresas e Indústrias',
     heroSubtitle: 'Melhore a comunicação interna e fortaleça o engajamento dos colaboradores com mídia digital corporativa.',
-    heroImage: 'https://images.unsplash.com/photo-1560264418-c4445382edbc?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://public.midiasplay.com/site/solucao-corporativo.webp',
     heroMedia: [
         {
             type: 'image',

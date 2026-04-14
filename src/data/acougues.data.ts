@@ -6,7 +6,7 @@ export const acougues: PageType = {
     heroKicker: '🥩',
     heroTitle: 'Mídia Indoor para Açougues',
     heroSubtitle: 'Destaque suas ofertas e produtos com comunicação digital atrativa e moderna.',
-    heroImage: 'https://images.unsplash.com/photo-1603046891744-87d3e2fbcf6b?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://public.midiasplay.com/site/solucao-acougue.webp',
     heroMedia: [
         {
             type: 'image',

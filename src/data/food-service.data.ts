@@ -6,16 +6,16 @@ export const foodService: PageType = {
     heroKicker: '🍔',
     heroTitle: 'Mídia Indoor para Food Service',
     heroSubtitle: 'Atraia clientes e aumente suas vendas com comunicação visual irresistível.',
-    heroImage: 'https://images.unsplash.com/photo-1528605248644-14dd04022da1',
+    heroImage: 'https://public.midiasplay.com/site/solucao-restaurante-3.webp',
     heroMedia: [
         {
             type: 'image',
-            src: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5',
+            src: 'https://public.midiasplay.com/site/solucao-restaurante-1.webp',
             alt: 'Restaurante moderno com mídia indoor',
         },
         {
             type: 'image',
-            src: 'https://images.unsplash.com/photo-1592861956120-e524fc739696',
+            src: 'https://public.midiasplay.com/site/solucao-restaurante-2.webp',
             alt: 'Painel digital exibindo cardápio e promoções',
         },
     ],

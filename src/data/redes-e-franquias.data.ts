@@ -6,7 +6,7 @@ export const redesDeLojasEFranquias: PageType = {
     heroKicker: '🏬',
     heroTitle: 'Mídia Indoor para Redes de Lojas e Franquias',
     heroSubtitle: 'Gerencie campanhas e conteúdos de forma centralizada para todas as suas unidades.',
-    heroImage: 'https://images.unsplash.com/photo-1522199755839-a2bacb67c546?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://public.midiasplay.com/site/solucao-franquia.webp',
     heroMedia: [
         {
             type: 'image',

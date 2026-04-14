@@ -7,11 +7,11 @@ export const varejo: PageType = {
     heroTitle: 'Mídia Indoor para o Varejo',
     heroSubtitle:
         'Transforme sua loja em uma poderosa vitrine digital: aumente vendas, engaje clientes e comunique com eficiência.',
-    heroImage: '/supermercado-01.png',
+    heroImage: 'https://public.midiasplay.com/site/solucao-mercado.webp',
     heroMedia: [
         {
             type: 'image',
-            src: 'https://images.unsplash.com/photo-1607082349566-187342175e2f?auto=format&fit=crop&w=1600&q=80',
+            src: 'https://public.midiasplay.com/site/solucao-mercado-2.webp',
             alt: 'Supermercado com telas exibindo ofertas e promoções'
         },
         {

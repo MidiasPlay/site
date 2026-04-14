@@ -6,7 +6,7 @@ export const instituicoesDeEnsino: PageType = {
     heroKicker: '🎓',
     heroTitle: 'Mídia Indoor para Escolas e Universidades',
     heroSubtitle: 'Comunicação eficiente e moderna para alunos, professores e visitantes.',
-    heroImage: '/universidade-01.png',
+    heroImage: 'https://public.midiasplay.com/site/solucao-universidade.webp',
     heroMedia: [
         {
             type: 'image',

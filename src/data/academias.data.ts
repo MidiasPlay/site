@@ -6,7 +6,7 @@ export const academias: PageType = {
     heroKicker: '💪',
     heroTitle: 'Mídia Indoor para Academias',
     heroSubtitle: 'Crie programas turbinados com vídeos e informações que motivam e engajam seus clientes.',
-    heroImage: '/academia-01.png',
+    heroImage: 'https://public.midiasplay.com/site/solucao-academia.webp',
     heroMedia: [
         {
             type: 'image',

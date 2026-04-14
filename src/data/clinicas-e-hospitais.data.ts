@@ -6,7 +6,7 @@ export const clinicasEHospitais: PageType = {
     heroKicker: '🏥',
     heroTitle: 'Mídia Indoor para Clínicas e Hospitais',
     heroSubtitle: 'Transforme a experiência dos pacientes com comunicação visual inteligente.',
-    heroImage: 'https://hospitaligesp.com.br/wp-content/uploads/2023/03/DSCF3283-scaled.jpg', // opcional
+    heroImage: 'https://public.midiasplay.com/site/solucao-clinica.webp',
     heroMedia: [
         {
             type: 'image',

@@ -6,7 +6,7 @@ export const shoppingsEGalerias: PageType = {
     heroKicker: '🏢',
     heroTitle: 'Mídia Indoor para Shoppings e Galerias',
     heroSubtitle: 'Modernize a comunicação e valorize a experiência dos visitantes e lojistas.',
-    heroImage: 'https://images.unsplash.com/photo-1604328698692-f76ea9498e76?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://public.midiasplay.com/site/solucao-shopping.webp',
     heroMedia: [
         {
             type: 'image',

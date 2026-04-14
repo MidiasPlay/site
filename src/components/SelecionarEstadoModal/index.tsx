@@ -19,7 +19,7 @@ export const SelecionarEstadoModal: React.FC<SelecionarEstadoModalProps> = ({ is
 
     function getPhoneNumber(estado: EstadoEnum): string {
         // Mapeamento de estados para números de WhatsApp específicos
-        const NUMERO_WILLIAN = '5541996903121';
+        const NUMERO_WILLIAN = '554497409710';
         const NUMERO_SAMUEL = '553181018181';
 
         const estadoPhoneMap: Record<EstadoEnum, string> = {
