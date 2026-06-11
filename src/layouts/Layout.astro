@@ -10,6 +10,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer/index.astro';
 import WhatsAppButton from '../components/WhatsAppButton';
 import SelecionarEstadoModalWrapper from '../components/SelecionarEstadoModal/Wrapper';
+import { WhatsAppButtonV2 } from '../components/WhatsAppButtonV2';
 ---
 
 <!doctype html>
@@ -36,7 +37,8 @@ import SelecionarEstadoModalWrapper from '../components/SelecionarEstadoModal/Wr
 			<slot />
 		</main>
 		<Footer />
-        <WhatsAppButton client:load />
+        <!-- <WhatsAppButton client:load /> -->
+        <WhatsAppButtonV2 client:load />
         <SelecionarEstadoModalWrapper client:load />
 	</body>
 </html>

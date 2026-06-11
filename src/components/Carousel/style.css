@@ -14,12 +14,27 @@
     max-height: 600px; /* Altura máxima para telas grandes */
 }
 
+/* Desktop and Mobile Carousel Visibility */
+.desktop-carousel {
+    display: block;
+}
+
+.mobile-carousel {
+    display: none;
+}
+
 /* Slide Styling */
 .carousel-slide {
     position: relative;
     width: 100%;
     height: 100%;
     overflow: hidden;
+}
+
+/* Ensure swiper internals respect container height */
+.institutional-carousel .swiper-wrapper,
+.institutional-carousel .swiper-slide {
+    height: 100%;
 }
 
 /* Image Wrapper */
@@ -45,23 +60,14 @@
 
 /* Overlay for better text readability (if needed) */
 .carousel-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(
-        180deg,
-        rgba(0, 0, 0, 0.1) 0%,
-        rgba(0, 0, 0, 0.2) 50%,
-        rgba(0, 0, 0, 0.3) 100%
-    );
-    pointer-events: none;
+    display: none;
 }
 
 /* Custom Navigation Buttons */
 .carousel-button-prev,
-.carousel-button-next {
+.carousel-button-next,
+.carousel-button-prev-mobile,
+.carousel-button-next-mobile {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -79,29 +85,37 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-.carousel-button-prev {
+.carousel-button-prev,
+.carousel-button-prev-mobile {
     left: 20px;
 }
 
-.carousel-button-next {
+.carousel-button-next,
+.carousel-button-next-mobile {
     right: 20px;
 }
 
 .carousel-button-prev:hover,
-.carousel-button-next:hover {
+.carousel-button-next:hover,
+.carousel-button-prev-mobile:hover,
+.carousel-button-next-mobile:hover {
     background: rgba(255, 255, 255, 1);
     transform: translateY(-50%) scale(1.05);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
 .carousel-button-prev svg,
-.carousel-button-next svg {
+.carousel-button-next svg,
+.carousel-button-prev-mobile svg,
+.carousel-button-next-mobile svg {
     color: #2c3e50;
     transition: color 0.3s ease;
 }
 
 .carousel-button-prev:hover svg,
-.carousel-button-next:hover svg {
+.carousel-button-next:hover svg,
+.carousel-button-prev-mobile:hover svg,
+.carousel-button-next-mobile:hover svg {
     color: #3498db;
 }
 
@@ -141,44 +155,63 @@
     }
     
     .carousel-button-prev,
-    .carousel-button-next {
+    .carousel-button-next,
+    .carousel-button-prev-mobile,
+    .carousel-button-next-mobile {
         width: 45px;
         height: 45px;
     }
     
-    .carousel-button-prev {
+    .carousel-button-prev,
+    .carousel-button-prev-mobile {
         left: 15px;
     }
     
-    .carousel-button-next {
+    .carousel-button-next,
+    .carousel-button-next-mobile {
         right: 15px;
     }
 }
 
 /* Mobile */
 @media (max-width: 768px) {
+    /* Hide desktop carousel and show mobile carousel */
+    .desktop-carousel {
+        display: none;
+    }
+    
+    .mobile-carousel {
+        display: block;
+    }
+    
     .institutional-carousel {
-        height: 50vh;
-        min-height: 300px;
-        max-height: 400px;
+        height: calc(100vw / 2.058);
+        min-height: unset;
+        max-height: unset;
     }
     
     .carousel-button-prev,
-    .carousel-button-next {
+    .carousel-button-next,
+    .carousel-button-prev-mobile,
+    .carousel-button-next-mobile {
         width: 40px;
         height: 40px;
     }
     
-    .carousel-button-prev {
+    .carousel-button-prev,
+    .carousel-button-prev-mobile {
         left: 10px;
     }
     
-    .carousel-button-next {
+    .carousel-button-next,
+    .carousel-button-next-mobile {
         right: 10px;
     }
     
     .carousel-button-prev svg,
-    .carousel-button-next svg {
+    .carousel-button-next svg,
+    .carousel-button-prev-mobile svg,
+    .carousel-button-next-mobile svg {
         width: 20px;
         height: 20px;
     }
@@ -192,20 +225,7 @@
 
 /* Small Mobile */
 @media (max-width: 480px) {
-    .institutional-carousel {
-        height: 45vh;
-        min-height: 250px;
-        max-height: 350px;
-    }
-    
-    .carousel-overlay {
-        background: linear-gradient(
-            180deg,
-            rgba(0, 0, 0, 0.2) 0%,
-            rgba(0, 0, 0, 0.3) 50%,
-            rgba(0, 0, 0, 0.4) 100%
-        );
-    }
+    /* aspect-ratio mantido via calc(100vw / 2.058) do breakpoint mobile */
 }
 
 /* Animation for smooth transitions */
@@ -218,7 +238,9 @@
 /* High contrast mode support */
 @media (prefers-contrast: high) {
     .carousel-button-prev,
-    .carousel-button-next {
+    .carousel-button-next,
+    .carousel-button-prev-mobile,
+    .carousel-button-next-mobile {
         background: #ffffff;
         border: 2px solid #000000;
     }

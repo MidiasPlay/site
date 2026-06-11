@@ -6,11 +6,19 @@ import FeaturesSection from '../components/FeaturesSection/index.astro';
 
 <Layout>
 	<Carousel client:load
-		imageList={[
+		desktopImages={[
+            { src: 'https://public.midiasplay.com/site/banner_1920x600_sem_corte.jpg', alt: 'Academia' },
 			{ src: '/home-academia-01.jpg', alt: 'Academia' },
 			{ src: '/home-food-01.jpg', alt: 'Alimentação' },
 			{ src: '/home-varejo-01.jpg', alt: 'Varejo' },
             { src: '/home-hotel-01.jpg', alt: 'Hotelaria' },
+		]}
+		mobileImages={[
+            { src: 'https://public.midiasplay.com/site/banner_1920x600.jpg', alt: 'Academia' },
+			// { src: '/home-academia-01-mobile.jpg', alt: 'Academia' },
+			// { src: '/home-food-01-mobile.jpg', alt: 'Alimentação' },
+			// { src: '/home-varejo-01-mobile.jpg', alt: 'Varejo' },
+            // { src: '/home-hotel-01-mobile.jpg', alt: 'Hotelaria' },
 		]}
 	/>
 	<FeaturesSection />
