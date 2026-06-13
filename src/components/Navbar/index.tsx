@@ -133,9 +133,9 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
                 </ul>
 
                 {/* CTA Button */}
-                <div className="nav-cta">
-                    <a href="https://controle.midiasplay.com.br" className="cta-button">Acessar</a>
-                </div>
+                {/* <div className="nav-cta">
+                    <a href="" className="cta-button">Acessar</a>
+                </div> */}
 
                 {/* Mobile Menu Toggle */}
                 <div
